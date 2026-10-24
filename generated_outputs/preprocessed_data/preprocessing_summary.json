@@ -1,0 +1,84 @@
+{
+  "status": "Clean & Verified",
+  "metrics": {
+    "files_loaded": 6,
+    "total_input_rows": 3350,
+    "total_valid_rows": 3350,
+    "classes_count": 400,
+    "rooms_count": 50,
+    "teachers_count": 60,
+    "time_slots_count": 40,
+    "availability_records_count": 2400,
+    "course_requirements_count": 400,
+    "invalid_records_count": 0,
+    "duplicates_detected": 0,
+    "missing_values_handled": 0,
+    "foreign_key_issues_count": 0
+  },
+  "tables": {
+    "classes": {
+      "input_rows": 400,
+      "valid_rows": 400,
+      "invalid_rows": 0,
+      "missing_handled": 0
+    },
+    "rooms": {
+      "input_rows": 50,
+      "valid_rows": 50,
+      "invalid_rows": 0,
+      "missing_handled": 0
+    },
+    "teachers": {
+      "input_rows": 60,
+      "valid_rows": 60,
+      "invalid_rows": 0,
+      "missing_handled": 0
+    },
+    "time_slots": {
+      "input_rows": 40,
+      "valid_rows": 40,
+      "invalid_rows": 0,
+      "missing_handled": 0
+    },
+    "teacher_availability": {
+      "input_rows": 2400,
+      "valid_rows": 2400,
+      "invalid_rows": 0,
+      "missing_handled": 0
+    },
+    "course_requirements": {
+      "input_rows": 400,
+      "valid_rows": 400,
+      "invalid_rows": 0,
+      "missing_handled": 0
+    }
+  },
+  "integrity_checks": [
+    {
+      "check": "Required CSV Files Ingestion",
+      "status": "Passed (6/6 files verified)"
+    },
+    {
+      "check": "Room Schema (NO room_type)",
+      "status": "Passed (100% compliant with room_id, room_name, capacity, building)"
+    },
+    {
+      "check": "Teacher Terminology & Foreign Keys",
+      "status": "Passed (60 teachers verified)"
+    },
+    {
+      "check": "Time Slot Interval Boundaries",
+      "status": "Passed (40 valid interval periods)"
+    },
+    {
+      "check": "Class Duration & Consecutive Slots",
+      "status": "Passed (60m and 120m placement windows verified)"
+    },
+    {
+      "check": "Teacher Availability Matrix",
+      "status": "Passed (1985 available, 415 unavailable)"
+    }
+  ],
+  "missing_handled_sample": [],
+  "cleaning_actions": []
+}

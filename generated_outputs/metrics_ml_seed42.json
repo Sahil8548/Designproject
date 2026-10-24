@@ -1,0 +1,15 @@
+{
+  "mode": "ml",
+  "seed": 42,
+  "repaired": false,
+  "newly_repaired_classes": 0,
+  "scheduled_classes": 882,
+  "total_classes": 896,
+  "unassigned_classes": 14,
+  "room_overlap_pairs": 0,
+  "instructor_overlap_pairs": 0,
+  "shared_student_overlap_pairs_proxy": 2625,
+  "preference_cost_sum": -5328.5,
+  "runtime_seconds": 5.14,
+  "timestamp": "2026-10-23T11:49:14.591883"
+}

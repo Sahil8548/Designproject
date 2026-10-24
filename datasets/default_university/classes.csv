@@ -1,0 +1,37 @@
+class_id,course_code,course_name,department,student_count,duration_minutes,teacher_id
+C001,CS101,"Intro to Python Programming",Computer Science,60,60,T001
+C002,CS102,"Data Structures and Algorithms",Computer Science,48,60,T002
+C003,CS103,"Operating Systems Lab",Computer Science,40,120,T001
+C004,CS201,"Artificial Intelligence",Computer Science,75,60,T015
+C005,CS202,"Machine Learning Seminar",Computer Science,55,120,T002
+C006,IT101,"Information Systems Design",Information Technology,50,60,T003
+C007,IT102,"Database Architecture",Information Technology,65,60,T004
+C008,IT103,"Web Engineering Studio",Information Technology,45,120,T016
+C009,IT201,"Cloud Computing Infrastructure",Information Technology,58,60,T003
+C010,IT202,"Cybersecurity Principles",Information Technology,42,60,T004
+C011,MA101,"Calculus and Linear Algebra",Mathematics,85,60,T005
+C012,MA102,"Discrete Mathematics",Mathematics,60,60,T006
+C013,MA201,"Probability and Statistics",Mathematics,70,60,T005
+C014,MA202,"Numerical Analysis Workshop",Mathematics,35,120,T006
+C015,PH101,"Classical Mechanics",Physics,80,60,T007
+C016,PH102,"Electromagnetism & Waves",Physics,65,60,T008
+C017,PH103,"Experimental Physics Lab",Physics,38,120,T007
+C018,PH201,"Quantum Physics Fundamentals",Physics,45,60,T008
+C019,EE101,"Circuit Theory & Analysis",Electrical Engineering,70,60,T009
+C020,EE102,"Digital Electronics Lab",Electrical Engineering,40,120,T010
+C021,EE201,"Signals and Systems",Electrical Engineering,52,60,T009
+C022,EE202,"Power Grid Engineering",Electrical Engineering,48,60,T010
+C023,ME101,"Engineering Thermodynamics",Mechanical Engineering,75,60,T011
+C024,ME102,"Fluid Dynamics",Mechanical Engineering,62,60,T012
+C025,ME103,"CAD Modeling Workshop",Mechanical Engineering,42,120,T011
+C026,ME201,"Robotics and Automation",Mechanical Engineering,50,120,T012
+C027,BA101,"Principles of Management",Business Administration,90,60,T013
+C028,BA102,"Financial Accounting",Business Administration,65,60,T014
+C029,BA201,"Organizational Behavior",Business Administration,55,60,T013
+C030,BA202,"Strategic Marketing Studies",Business Administration,48,120,T014
+C031,CS301,"Cloud Native Microservices",Computer Science,50,60,T015
+C032,IT301,"Network Protocol Engineering",Information Technology,45,60,T016
+C033,MA301,"Applied Linear Systems",Mathematics,60,60,T005
+C034,PH301,"Solid State Physics",Physics,40,60,T007
+C035,EE301,"Embedded Systems Architecture",Electrical Engineering,45,120,T009
+C036,ME301,"Finite Element Analysis",Mechanical Engineering,40,120,T011

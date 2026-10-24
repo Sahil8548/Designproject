@@ -1,0 +1,23 @@
+{
+  "name": "unitime-intelligent-timetable-system",
+  "version": "2.0.0",
+  "description": "Intelligent University Timetable Management System on Purdue Fall 2007 Benchmark with ML Ranking, Ejection Repair, and Independent Constraint Validation",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "streamlit": "streamlit run run_app.py",
+    "test": "node -e \"console.log('Testing server API...'); require('http').get('http://localhost:3000/api/tests', r => r.pipe(process.stdout));\""
+  },
+  "keywords": [
+    "university-timetabling",
+    "machine-learning",
+    "randomforest",
+    "xgboost",
+    "logistic-regression",
+    "constraint-optimization",
+    "purdue-benchmark"
+  ],
+  "author": "Antigravity Engineering",
+  "license": "MIT"
+}

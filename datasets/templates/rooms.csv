@@ -1,0 +1,5 @@
+room_id,room_name,capacity,building
+R101,Room 101,70,Block A
+R102,Room 102,50,Block A
+R103,Room 103,40,Block B
+R104,Room 104,100,Block C

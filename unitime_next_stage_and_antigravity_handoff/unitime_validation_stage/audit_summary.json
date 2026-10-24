@@ -1,0 +1,11 @@
+{
+  "solution_assignments": 896,
+  "missing_room_or_time_records": 1,
+  "room_option_mismatches": 0,
+  "time_option_mismatches": 0,
+  "room_overlap_pairs": 56,
+  "instructor_overlap_pairs": 18,
+  "potential_student_overlap_pairs": 2764,
+  "room_capacity_issues": 45,
+  "unknown_rooms": 0
+}

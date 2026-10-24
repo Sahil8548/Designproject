@@ -1,0 +1,17 @@
+teacher_id,teacher_name,department
+T001,Dr. Alan Turing,Computer Science
+T002,Dr. Grace Hopper,Computer Science
+T003,Dr. Claude Shannon,Information Technology
+T004,Dr. Ada Lovelace,Information Technology
+T005,Dr. John von Neumann,Mathematics
+T006,Dr. Katherine Johnson,Mathematics
+T007,Dr. Richard Feynman,Physics
+T008,Dr. Marie Curie,Physics
+T009,Dr. Nikola Tesla,Electrical Engineering
+T010,Dr. Michael Faraday,Electrical Engineering
+T011,Dr. Henry Ford,Mechanical Engineering
+T012,Dr. James Watt,Mechanical Engineering
+T013,Dr. Peter Drucker,Business Administration
+T014,Dr. Philip Kotler,Business Administration
+T015,Dr. Donald Knuth,Computer Science
+T016,Dr. Barbara Liskov,Information Technology

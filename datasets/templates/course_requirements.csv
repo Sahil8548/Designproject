@@ -1,0 +1,5 @@
+class_id,allowed_days,preferred_time,fixed_room_id,fixed_slot_id
+C001,Monday|Wednesday|Friday,Morning,,
+C002,Monday|Tuesday|Thursday,Afternoon,,
+C003,Monday|Wednesday|Friday,Morning,R104,
+C004,Tuesday|Thursday,Afternoon,,TUE_1300

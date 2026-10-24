@@ -1,0 +1,9 @@
+mode,seed,scheduled_classes,total_classes,unassigned_classes,newly_repaired_classes,room_overlap_pairs,instructor_overlap_pairs,preference_cost_sum,output
+baseline,2026,881,896,15,13,0,0,-5157.5,timetable_baseline_repaired.csv
+ml,2026,882,896,14,0,0,0,-5328.5,timetable_ml_repaired.csv
+baseline,7,881,896,15,13,0,0,-5163.0,timetable_baseline_repaired.csv
+baseline,21,881,896,15,13,0,0,-5168.0,timetable_baseline_repaired.csv
+baseline,77,881,896,15,13,0,0,-5136.0,timetable_baseline_repaired.csv
+ml,7,882,896,14,0,0,0,-5328.5,timetable_ml_repaired.csv
+ml,21,882,896,14,0,0,0,-5328.5,timetable_ml_repaired.csv
+ml,77,882,896,14,0,0,0,-5328.5,timetable_ml_repaired.csv

@@ -1,0 +1,108 @@
+{
+  "stage": "repair heuristic and multi-seed checks",
+  "runs": [
+    {
+      "mode": "baseline",
+      "seed": 2026,
+      "scheduled_classes": 881,
+      "total_classes": 896,
+      "unassigned_classes": 15,
+      "newly_repaired_classes": 13,
+      "room_overlap_pairs": 0,
+      "instructor_overlap_pairs": 0,
+      "preference_cost_sum": -5157.5,
+      "output": "timetable_baseline_repaired.csv"
+    },
+    {
+      "mode": "ml",
+      "seed": 2026,
+      "scheduled_classes": 882,
+      "total_classes": 896,
+      "unassigned_classes": 14,
+      "newly_repaired_classes": 0,
+      "room_overlap_pairs": 0,
+      "instructor_overlap_pairs": 0,
+      "preference_cost_sum": -5328.5,
+      "output": "timetable_ml_repaired.csv"
+    },
+    {
+      "mode": "baseline",
+      "seed": 7,
+      "scheduled_classes": 881,
+      "total_classes": 896,
+      "unassigned_classes": 15,
+      "newly_repaired_classes": 13,
+      "room_overlap_pairs": 0,
+      "instructor_overlap_pairs": 0,
+      "preference_cost_sum": -5163.0,
+      "output": "timetable_baseline_repaired.csv"
+    },
+    {
+      "mode": "baseline",
+      "seed": 21,
+      "scheduled_classes": 881,
+      "total_classes": 896,
+      "unassigned_classes": 15,
+      "newly_repaired_classes": 13,
+      "room_overlap_pairs": 0,
+      "instructor_overlap_pairs": 0,
+      "preference_cost_sum": -5168.0,
+      "output": "timetable_baseline_repaired.csv"
+    },
+    {
+      "mode": "baseline",
+      "seed": 77,
+      "scheduled_classes": 881,
+      "total_classes": 896,
+      "unassigned_classes": 15,
+      "newly_repaired_classes": 13,
+      "room_overlap_pairs": 0,
+      "instructor_overlap_pairs": 0,
+      "preference_cost_sum": -5136.0,
+      "output": "timetable_baseline_repaired.csv"
+    },
+    {
+      "mode": "ml",
+      "seed": 7,
+      "scheduled_classes": 882,
+      "total_classes": 896,
+      "unassigned_classes": 14,
+      "newly_repaired_classes": 0,
+      "room_overlap_pairs": 0,
+      "instructor_overlap_pairs": 0,
+      "preference_cost_sum": -5328.5,
+      "output": "timetable_ml_repaired.csv"
+    },
+    {
+      "mode": "ml",
+      "seed": 21,
+      "scheduled_classes": 882,
+      "total_classes": 896,
+      "unassigned_classes": 14,
+      "newly_repaired_classes": 0,
+      "room_overlap_pairs": 0,
+      "instructor_overlap_pairs": 0,
+      "preference_cost_sum": -5328.5,
+      "output": "timetable_ml_repaired.csv"
+    },
+    {
+      "mode": "ml",
+      "seed": 77,
+      "scheduled_classes": 882,
+      "total_classes": 896,
+      "unassigned_classes": 14,
+      "newly_repaired_classes": 0,
+      "room_overlap_pairs": 0,
+      "instructor_overlap_pairs": 0,
+      "preference_cost_sum": -5328.5,
+      "output": "timetable_ml_repaired.csv"
+    }
+  ],
+  "limitations": [
+    "Greedy repair tries direct insertions and one-level ejection of up to two conflicting classes.",
+    "Group constraints, date exceptions, and complete student conflict semantics remain unimplemented.",
+    "Multiple seeds here vary repair order only; they are not independent datasets.",
+    "This is an engineering prototype, not proof of globally optimal or fully valid timetable."
+  ],
+  "elapsed_seconds": 38.25
+}

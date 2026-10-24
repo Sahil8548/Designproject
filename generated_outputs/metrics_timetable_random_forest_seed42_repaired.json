@@ -1,0 +1,14 @@
+{
+  "total_classes": 36,
+  "scheduled_classes": 36,
+  "unassigned_classes": 0,
+  "completion_pct": 100,
+  "room_overlap_pairs": 0,
+  "instructor_overlap_pairs": 0,
+  "availability_violations": 0,
+  "room_capacity_deficits": 0,
+  "fixed_constraint_violations": 0,
+  "soft_preference_cost": 39,
+  "runtime_seconds": 0.011,
+  "unassigned_details": []
+}

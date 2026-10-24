@@ -1,0 +1,435 @@
+{
+  "current_stage": 6,
+  "stage_status": "approved",
+  "dataset_fingerprint": "34a115f39c28c5f4",
+  "config": {
+    "model": "random_forest",
+    "seed": 42,
+    "apply_repair": true
+  },
+  "stages": {
+    "1": {
+      "name": "CSV Input",
+      "status": "approved",
+      "summary": {
+        "all_ready": true,
+        "files_count": 6,
+        "files": [
+          {
+            "filename": "classes.csv",
+            "present": true,
+            "rowCount": 400,
+            "columns": [
+              "class_id",
+              "course_code",
+              "course_name",
+              "department",
+              "student_count",
+              "duration_minutes",
+              "teacher_id"
+            ],
+            "required": true
+          },
+          {
+            "filename": "rooms.csv",
+            "present": true,
+            "rowCount": 50,
+            "columns": [
+              "room_id",
+              "room_name",
+              "capacity",
+              "building"
+            ],
+            "required": true
+          },
+          {
+            "filename": "teachers.csv",
+            "present": true,
+            "rowCount": 60,
+            "columns": [
+              "teacher_id",
+              "teacher_name",
+              "department"
+            ],
+            "required": true
+          },
+          {
+            "filename": "time_slots.csv",
+            "present": true,
+            "rowCount": 40,
+            "columns": [
+              "slot_id",
+              "day",
+              "start_time",
+              "end_time"
+            ],
+            "required": true
+          },
+          {
+            "filename": "teacher_availability.csv",
+            "present": true,
+            "rowCount": 2400,
+            "columns": [
+              "teacher_id",
+              "slot_id",
+              "available"
+            ],
+            "required": true
+          },
+          {
+            "filename": "course_requirements.csv",
+            "present": true,
+            "rowCount": 400,
+            "columns": [
+              "class_id",
+              "allowed_days",
+              "preferred_time",
+              "fixed_room_id",
+              "fixed_slot_id"
+            ],
+            "required": true
+          }
+        ]
+      },
+      "completed_at": "2026-10-24T03:47:33.601Z",
+      "approved_at": "2026-10-24T03:50:23.754Z"
+    },
+    "2": {
+      "name": "Data Preprocessing",
+      "status": "approved",
+      "summary": {
+        "status": "Clean & Verified",
+        "metrics": {
+          "files_loaded": 6,
+          "total_input_rows": 3350,
+          "total_valid_rows": 3350,
+          "classes_count": 400,
+          "rooms_count": 50,
+          "teachers_count": 60,
+          "time_slots_count": 40,
+          "availability_records_count": 2400,
+          "course_requirements_count": 400,
+          "invalid_records_count": 0,
+          "duplicates_detected": 0,
+          "missing_values_handled": 0,
+          "foreign_key_issues_count": 0
+        },
+        "tables": {
+          "classes": {
+            "input_rows": 400,
+            "valid_rows": 400,
+            "invalid_rows": 0,
+            "missing_handled": 0
+          },
+          "rooms": {
+            "input_rows": 50,
+            "valid_rows": 50,
+            "invalid_rows": 0,
+            "missing_handled": 0
+          },
+          "teachers": {
+            "input_rows": 60,
+            "valid_rows": 60,
+            "invalid_rows": 0,
+            "missing_handled": 0
+          },
+          "time_slots": {
+            "input_rows": 40,
+            "valid_rows": 40,
+            "invalid_rows": 0,
+            "missing_handled": 0
+          },
+          "teacher_availability": {
+            "input_rows": 2400,
+            "valid_rows": 2400,
+            "invalid_rows": 0,
+            "missing_handled": 0
+          },
+          "course_requirements": {
+            "input_rows": 400,
+            "valid_rows": 400,
+            "invalid_rows": 0,
+            "missing_handled": 0
+          }
+        },
+        "integrity_checks": [
+          {
+            "check": "Required CSV Files Ingestion",
+            "status": "Passed (6/6 files verified)"
+          },
+          {
+            "check": "Room Schema (NO room_type)",
+            "status": "Passed (100% compliant with room_id, room_name, capacity, building)"
+          },
+          {
+            "check": "Teacher Terminology & Foreign Keys",
+            "status": "Passed (60 teachers verified)"
+          },
+          {
+            "check": "Time Slot Interval Boundaries",
+            "status": "Passed (40 valid interval periods)"
+          },
+          {
+            "check": "Class Duration & Consecutive Slots",
+            "status": "Passed (60m and 120m placement windows verified)"
+          },
+          {
+            "check": "Teacher Availability Matrix",
+            "status": "Passed (1985 available, 415 unavailable)"
+          }
+        ],
+        "missing_handled_sample": [],
+        "cleaning_actions": []
+      },
+      "completed_at": "2026-10-24T03:50:26.978Z",
+      "approved_at": "2026-10-24T03:50:28.429Z"
+    },
+    "3": {
+      "name": "AI/ML Model Scoring",
+      "status": "approved",
+      "summary": {
+        "selected_model": "random_forest",
+        "classes_evaluated": 400,
+        "total_candidate_placements_scored": 224996,
+        "score_distribution": {
+          "min": 0.2,
+          "max": 0.99,
+          "mean": 0.724
+        },
+        "sample_top_placements": [
+          {
+            "class_id": "C0004",
+            "course": "MA104 - Engineering Mathematics",
+            "top_room": "Room 017",
+            "top_day": "Monday",
+            "top_time": "10:00–11:00",
+            "score": 0.99,
+            "total_eligible_options": 1
+          },
+          {
+            "class_id": "C0007",
+            "course": "CE107 - Structural Analysis",
+            "top_room": "Room 035",
+            "top_day": "Thursday",
+            "top_time": "09:00–11:00",
+            "score": 0.99,
+            "total_eligible_options": 1
+          },
+          {
+            "class_id": "C0009",
+            "course": "CS111 - Software Engineering",
+            "top_room": "Room 033",
+            "top_day": "Wednesday",
+            "top_time": "13:00–14:00",
+            "score": 0.47,
+            "total_eligible_options": 1
+          },
+          {
+            "class_id": "C0010",
+            "course": "IT112 - Python Programming",
+            "top_room": "Room 039",
+            "top_day": "Friday",
+            "top_time": "12:00–13:00",
+            "score": 0.82,
+            "total_eligible_options": 1
+          },
+          {
+            "class_id": "C0012",
+            "course": "MA114 - Numerical Methods",
+            "top_room": "Room 009",
+            "top_day": "Monday",
+            "top_time": "11:00–12:00",
+            "score": 0.47,
+            "total_eligible_options": 1
+          }
+        ],
+        "model_metrics": {
+          "accuracy": 0.942,
+          "precision": 0.285,
+          "calibrated_precision": 0.745,
+          "recall": 0.865,
+          "f1": 0.428,
+          "roc_auc": 0.938
+        },
+        "feature_importance": [
+          {
+            "feature": "capacity_surplus",
+            "weight": 0.32
+          },
+          {
+            "feature": "time_preference_match",
+            "weight": 0.25
+          },
+          {
+            "feature": "building_affinity",
+            "weight": 0.19
+          },
+          {
+            "feature": "day_alignment",
+            "weight": 0.14
+          },
+          {
+            "feature": "duration_consecutive_fit",
+            "weight": 0.1
+          }
+        ]
+      },
+      "completed_at": "2026-10-24T03:50:33.368Z",
+      "approved_at": "2026-10-24T03:51:11.989Z"
+    },
+    "4": {
+      "name": "Scheduling Algorithm",
+      "status": "approved",
+      "summary": {
+        "total_classes": 400,
+        "scheduled_classes": 393,
+        "unassigned_classes_count": 7,
+        "completion_percentage": 98.3,
+        "accuracy_rate": 98.3,
+        "precision_rate": 100,
+        "model_precision_rate": 74.5,
+        "execution_time_seconds": 0.026,
+        "soft_preference_cost": 780.5,
+        "unassigned_classes": [
+          {
+            "class_id": "C0001",
+            "course_code": "CS101",
+            "course_name": "Data Structures",
+            "teacher_id": "T025",
+            "duration_minutes": 60,
+            "student_count": 25,
+            "reason": "No eligible candidate placement matching teacher availability, capacity, and day constraints."
+          },
+          {
+            "class_id": "C0002",
+            "course_code": "IT102",
+            "course_name": "Cloud Computing",
+            "teacher_id": "T010",
+            "duration_minutes": 60,
+            "student_count": 35,
+            "reason": "No eligible candidate placement matching teacher availability, capacity, and day constraints."
+          },
+          {
+            "class_id": "C0003",
+            "course_code": "EC103",
+            "course_name": "Embedded Systems",
+            "teacher_id": "T003",
+            "duration_minutes": 60,
+            "student_count": 55,
+            "reason": "No eligible candidate placement matching teacher availability, capacity, and day constraints."
+          },
+          {
+            "class_id": "C0005",
+            "course_code": "PH105",
+            "course_name": "Applied Optics",
+            "teacher_id": "T013",
+            "duration_minutes": 120,
+            "student_count": 100,
+            "reason": "No eligible candidate placement matching teacher availability, capacity, and day constraints."
+          },
+          {
+            "class_id": "C0006",
+            "course_code": "ME106",
+            "course_name": "Manufacturing Processes",
+            "teacher_id": "T054",
+            "duration_minutes": 60,
+            "student_count": 80,
+            "reason": "No eligible candidate placement matching teacher availability, capacity, and day constraints."
+          },
+          {
+            "class_id": "C0008",
+            "course_code": "BU108",
+            "course_name": "Financial Accounting",
+            "teacher_id": "T056",
+            "duration_minutes": 60,
+            "student_count": 35,
+            "reason": "No eligible candidate placement matching teacher availability, capacity, and day constraints."
+          },
+          {
+            "class_id": "C0011",
+            "course_code": "EC113",
+            "course_name": "Digital Electronics",
+            "teacher_id": "T011",
+            "duration_minutes": 120,
+            "student_count": 100,
+            "reason": "No eligible candidate placement matching teacher availability, capacity, and day constraints."
+          }
+        ]
+      },
+      "completed_at": "2026-10-24T03:51:16.970Z",
+      "approved_at": "2026-10-24T03:51:23.775Z"
+    },
+    "5": {
+      "name": "Independent Validation",
+      "status": "approved",
+      "summary": {
+        "overall_pass": true,
+        "scheduled_classes": 393,
+        "total_classes": 400,
+        "unassigned_classes_count": 7,
+        "room_overlap_pairs_count": 0,
+        "room_overlap_pairs": [],
+        "teacher_overlap_pairs_count": 0,
+        "teacher_overlap_pairs": [],
+        "availability_violations_count": 0,
+        "availability_violations": [],
+        "room_capacity_issues_count": 0,
+        "room_capacity_issues": [],
+        "fixed_constraint_violations_count": 0,
+        "fixed_constraint_violations": [],
+        "student_conflicts_limitation_notice": "Student-level conflict verification requires individual student-to-course registration matrices. In the absence of individual student enrollment records, course code collision prevention and department cohort separation have been enforced.",
+        "constraint_enforcement_status": [
+          {
+            "constraint": "Room Double-Booking (Hard)",
+            "violations": 0,
+            "status": "Pass (0 Overlaps)"
+          },
+          {
+            "constraint": "Teacher Double-Booking (Hard)",
+            "violations": 0,
+            "status": "Pass (0 Overlaps)"
+          },
+          {
+            "constraint": "Teacher Availability (Hard)",
+            "violations": 0,
+            "status": "Pass (0 Violations)"
+          },
+          {
+            "constraint": "Fixed Room/Slot Compliance (Hard)",
+            "violations": 0,
+            "status": "Pass (100% Compliant)"
+          },
+          {
+            "constraint": "Room Capacity Compliance (Hard)",
+            "violations": 0,
+            "status": "Pass (100% Compliant)"
+          },
+          {
+            "constraint": "Class Duration & Interval Integrity",
+            "violations": 0,
+            "status": "Pass (Compatible consecutive periods verified)"
+          }
+        ]
+      },
+      "completed_at": "2026-10-24T03:51:26.605Z",
+      "approved_at": "2026-10-24T03:51:29.855Z"
+    },
+    "6": {
+      "name": "Final Timetable",
+      "status": "approved",
+      "summary": {
+        "timetable_id": "timetable_random_forest_seed42_repaired",
+        "csv_filename": "timetable_random_forest_seed42_repaired.csv",
+        "scheduled_classes": 393,
+        "total_classes": 400,
+        "completion_percentage": "98.3",
+        "published_at": "2026-10-24T03:51:29.886Z"
+      },
+      "completed_at": "2026-10-24T03:51:29.886Z",
+      "approved_at": "2026-10-24T03:51:29.911Z"
+    }
+  },
+  "runtime_data": {
+    "final_timetable_id": "timetable_random_forest_seed42_repaired"
+  }
+}

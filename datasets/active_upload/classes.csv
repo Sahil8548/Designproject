@@ -1,0 +1,401 @@
+class_id,course_code,course_name,department,student_count,duration_minutes,teacher_id
+C0001,CS101,Data Structures,Computer Science,25,60,T025
+C0002,IT102,Cloud Computing,Information Technology,35,60,T010
+C0003,EC103,Embedded Systems,Electronics,55,60,T003
+C0004,MA104,Engineering Mathematics,Mathematics,40,60,T004
+C0005,PH105,Applied Optics,Physics,100,120,T013
+C0006,ME106,Manufacturing Processes,Mechanical,80,60,T054
+C0007,CE107,Structural Analysis,Civil,35,120,T023
+C0008,BU108,Financial Accounting,Business,35,60,T056
+C0009,CS111,Software Engineering,Computer Science,30,60,T049
+C0010,IT112,Python Programming,Information Technology,50,60,T034
+C0011,EC113,Digital Electronics,Electronics,100,120,T011
+C0012,MA114,Numerical Methods,Mathematics,30,60,T044
+C0013,PH115,Applied Optics,Physics,100,60,T005
+C0014,ME116,Thermodynamics,Mechanical,45,60,T054
+C0015,CE117,Surveying,Civil,30,120,T023
+C0016,BU118,Operations Management,Business,90,60,T016
+C0017,CS121,Software Engineering,Computer Science,50,60,T033
+C0018,IT122,Mobile Application Development,Information Technology,90,60,T018
+C0019,EC123,Embedded Systems,Electronics,100,60,T019
+C0020,MA124,Numerical Methods,Mathematics,55,60,T028
+C0021,PH125,Electromagnetics,Physics,25,60,T053
+C0022,ME126,Engineering Mechanics,Mechanical,50,120,T022
+C0023,CE127,Structural Analysis,Civil,40,60,T015
+C0024,BU128,Operations Management,Business,55,120,T016
+C0025,CS131,Computer Networks,Computer Science,35,60,T033
+C0026,IT132,Mobile Application Development,Information Technology,80,120,T050
+C0027,EC133,Microprocessors,Electronics,40,60,T059
+C0028,MA134,Engineering Mathematics,Mathematics,25,60,T020
+C0029,PH135,Applied Optics,Physics,90,120,T037
+C0030,ME136,Engineering Mechanics,Mechanical,55,120,T038
+C0031,CE137,Concrete Technology,Civil,70,60,T039
+C0032,BU138,Principles of Management,Business,90,60,T048
+C0033,CS141,Computer Networks,Computer Science,90,60,T009
+C0034,IT142,Information Security,Information Technology,55,60,T058
+C0035,EC143,Digital Electronics,Electronics,100,60,T019
+C0036,MA144,Discrete Mathematics,Mathematics,30,60,T028
+C0037,PH145,Applied Optics,Physics,50,60,T037
+C0038,ME146,Engineering Mechanics,Mechanical,80,60,T030
+C0039,CE147,Structural Analysis,Civil,30,60,T055
+C0040,BU148,Financial Accounting,Business,40,60,T016
+C0041,CS151,Data Structures,Computer Science,30,120,T009
+C0042,IT152,Data Analytics,Information Technology,35,60,T058
+C0043,EC153,Embedded Systems,Electronics,35,60,T051
+C0044,MA154,Linear Algebra,Mathematics,70,60,T036
+C0045,PH155,Modern Physics,Physics,90,60,T029
+C0046,ME156,Manufacturing Processes,Mechanical,30,60,T014
+C0047,CE157,Structural Analysis,Civil,50,60,T039
+C0048,BU158,Business Analytics,Business,80,60,T008
+C0049,CS161,Data Structures,Computer Science,100,60,T025
+C0050,IT162,Python Programming,Information Technology,25,60,T010
+C0051,EC163,Embedded Systems,Electronics,40,60,T059
+C0052,MA164,Linear Algebra,Mathematics,70,60,T060
+C0053,PH165,Applied Optics,Physics,60,120,T013
+C0054,ME166,Engineering Mechanics,Mechanical,30,120,T022
+C0055,CE167,Concrete Technology,Civil,55,120,T055
+C0056,BU168,Principles of Management,Business,90,60,T008
+C0057,CS171,Artificial Intelligence,Computer Science,100,60,T009
+C0058,IT172,Cloud Computing,Information Technology,40,60,T058
+C0059,EC173,Signals and Systems,Electronics,55,60,T035
+C0060,MA174,Numerical Methods,Mathematics,40,60,T060
+C0061,PH175,Engineering Physics,Physics,25,60,T005
+C0062,ME176,Thermodynamics,Mechanical,35,120,T030
+C0063,CE177,Concrete Technology,Civil,40,120,T007
+C0064,BU178,Business Analytics,Business,55,60,T032
+C0065,CS181,Computer Networks,Computer Science,60,60,T049
+C0066,IT182,Mobile Application Development,Information Technology,100,120,T018
+C0067,EC183,Signals and Systems,Electronics,45,60,T003
+C0068,MA184,Discrete Mathematics,Mathematics,100,60,T044
+C0069,PH185,Engineering Physics,Physics,25,120,T037
+C0070,ME186,Thermodynamics,Mechanical,25,60,T054
+C0071,CE187,Surveying,Civil,30,60,T047
+C0072,BU188,Business Analytics,Business,55,60,T040
+C0073,CS191,Operating Systems,Computer Science,80,60,T009
+C0074,IT192,Web Technologies,Information Technology,90,60,T034
+C0075,EC193,Signals and Systems,Electronics,90,60,T027
+C0076,MA194,Probability and Statistics,Mathematics,55,60,T036
+C0077,PH195,Modern Physics,Physics,50,60,T005
+C0078,ME196,Manufacturing Processes,Mechanical,80,60,T006
+C0079,CE197,Surveying,Civil,70,60,T015
+C0080,BU198,Financial Accounting,Business,30,60,T024
+C0081,CS201,Computer Networks,Computer Science,35,120,T033
+C0082,IT202,Data Analytics,Information Technology,90,60,T034
+C0083,EC203,Digital Electronics,Electronics,35,60,T011
+C0084,MA204,Engineering Mathematics,Mathematics,100,60,T036
+C0085,PH205,Electromagnetics,Physics,80,60,T045
+C0086,ME206,Fluid Mechanics,Mechanical,40,60,T038
+C0087,CE207,Concrete Technology,Civil,45,60,T007
+C0088,BU208,Operations Management,Business,45,60,T008
+C0089,CS211,Software Engineering,Computer Science,35,60,T017
+C0090,IT212,Mobile Application Development,Information Technology,60,120,T002
+C0091,EC213,Digital Electronics,Electronics,30,60,T003
+C0092,MA214,Probability and Statistics,Mathematics,80,60,T052
+C0093,PH215,Applied Optics,Physics,25,60,T021
+C0094,ME216,Engineering Mechanics,Mechanical,50,60,T046
+C0095,CE217,Surveying,Civil,90,60,T023
+C0096,BU218,Operations Management,Business,80,60,T016
+C0097,CS221,Database Systems,Computer Science,35,120,T001
+C0098,IT222,Cloud Computing,Information Technology,100,60,T050
+C0099,EC223,Signals and Systems,Electronics,45,60,T011
+C0100,MA224,Numerical Methods,Mathematics,25,120,T028
+C0101,PH225,Applied Optics,Physics,60,60,T021
+C0102,ME226,Thermodynamics,Mechanical,40,60,T046
+C0103,CE227,Surveying,Civil,55,60,T023
+C0104,BU228,Principles of Management,Business,45,60,T048
+C0105,CS231,Artificial Intelligence,Computer Science,90,60,T001
+C0106,IT232,Python Programming,Information Technology,45,60,T034
+C0107,EC233,Digital Electronics,Electronics,30,120,T043
+C0108,MA234,Probability and Statistics,Mathematics,55,60,T052
+C0109,PH235,Applied Optics,Physics,45,60,T045
+C0110,ME236,Manufacturing Processes,Mechanical,25,60,T022
+C0111,CE237,Concrete Technology,Civil,30,60,T039
+C0112,BU238,Financial Accounting,Business,90,60,T048
+C0113,CS241,Computer Networks,Computer Science,70,60,T049
+C0114,IT242,Information Security,Information Technology,55,60,T018
+C0115,EC243,Signals and Systems,Electronics,55,120,T019
+C0116,MA244,Discrete Mathematics,Mathematics,80,60,T052
+C0117,PH245,Engineering Physics,Physics,45,60,T013
+C0118,ME246,Manufacturing Processes,Mechanical,80,60,T030
+C0119,CE247,Concrete Technology,Civil,60,60,T039
+C0120,BU248,Operations Management,Business,100,60,T048
+C0121,CS251,Data Structures,Computer Science,45,60,T009
+C0122,IT252,Cloud Computing,Information Technology,90,60,T026
+C0123,EC253,Signals and Systems,Electronics,35,60,T003
+C0124,MA254,Linear Algebra,Mathematics,60,60,T060
+C0125,PH255,Modern Physics,Physics,90,60,T045
+C0126,ME256,Manufacturing Processes,Mechanical,60,120,T014
+C0127,CE257,Surveying,Civil,90,60,T055
+C0128,BU258,Principles of Management,Business,55,60,T016
+C0129,CS261,Web Development,Computer Science,25,60,T009
+C0130,IT262,Web Technologies,Information Technology,35,120,T042
+C0131,EC263,Communication Systems,Electronics,80,120,T059
+C0132,MA264,Linear Algebra,Mathematics,100,120,T060
+C0133,PH265,Electromagnetics,Physics,40,60,T053
+C0134,ME266,Manufacturing Processes,Mechanical,90,60,T022
+C0135,CE267,Concrete Technology,Civil,30,60,T015
+C0136,BU268,Financial Accounting,Business,50,60,T040
+C0137,CS271,Data Structures,Computer Science,35,60,T025
+C0138,IT272,Web Technologies,Information Technology,100,60,T026
+C0139,EC273,Digital Electronics,Electronics,55,120,T043
+C0140,MA274,Discrete Mathematics,Mathematics,60,120,T004
+C0141,PH275,Applied Optics,Physics,55,120,T053
+C0142,ME276,Engineering Mechanics,Mechanical,80,120,T030
+C0143,CE277,Structural Analysis,Civil,50,60,T055
+C0144,BU278,Operations Management,Business,55,60,T032
+C0145,CS281,Operating Systems,Computer Science,45,120,T057
+C0146,IT282,Python Programming,Information Technology,55,60,T050
+C0147,EC283,Signals and Systems,Electronics,60,60,T003
+C0148,MA284,Numerical Methods,Mathematics,80,60,T012
+C0149,PH285,Modern Physics,Physics,35,120,T013
+C0150,ME286,Engineering Mechanics,Mechanical,45,120,T022
+C0151,CE287,Surveying,Civil,60,60,T023
+C0152,BU288,Operations Management,Business,45,120,T024
+C0153,CS291,Data Structures,Computer Science,60,60,T001
+C0154,IT292,Information Security,Information Technology,40,60,T002
+C0155,EC293,Digital Electronics,Electronics,40,60,T003
+C0156,MA294,Discrete Mathematics,Mathematics,35,60,T020
+C0157,PH295,Modern Physics,Physics,90,60,T037
+C0158,ME296,Thermodynamics,Mechanical,60,60,T054
+C0159,CE297,Geotechnical Engineering,Civil,35,60,T055
+C0160,BU298,Business Analytics,Business,45,60,T040
+C0161,CS301,Programming Fundamentals,Computer Science,45,120,T049
+C0162,IT302,Mobile Application Development,Information Technology,40,60,T026
+C0163,EC303,Digital Electronics,Electronics,100,60,T011
+C0164,MA304,Discrete Mathematics,Mathematics,25,60,T052
+C0165,PH305,Electromagnetics,Physics,30,60,T005
+C0166,ME306,Manufacturing Processes,Mechanical,60,60,T030
+C0167,CE307,Geotechnical Engineering,Civil,90,120,T047
+C0168,BU308,Business Analytics,Business,55,60,T048
+C0169,CS311,Computer Networks,Computer Science,80,120,T057
+C0170,IT312,Web Technologies,Information Technology,100,60,T042
+C0171,EC313,Signals and Systems,Electronics,30,60,T059
+C0172,MA314,Linear Algebra,Mathematics,60,120,T044
+C0173,PH315,Engineering Physics,Physics,60,60,T013
+C0174,ME316,Manufacturing Processes,Mechanical,40,60,T054
+C0175,CE317,Geotechnical Engineering,Civil,50,60,T039
+C0176,BU318,Financial Accounting,Business,70,60,T040
+C0177,CS321,Operating Systems,Computer Science,30,60,T049
+C0178,IT322,Web Technologies,Information Technology,70,60,T058
+C0179,EC323,Communication Systems,Electronics,60,60,T011
+C0180,MA324,Probability and Statistics,Mathematics,40,120,T028
+C0181,PH325,Electromagnetics,Physics,90,60,T029
+C0182,ME326,Fluid Mechanics,Mechanical,55,60,T022
+C0183,CE327,Concrete Technology,Civil,45,60,T023
+C0184,BU328,Business Analytics,Business,30,60,T024
+C0185,CS331,Data Structures,Computer Science,100,60,T025
+C0186,IT332,Cloud Computing,Information Technology,100,120,T034
+C0187,EC333,Embedded Systems,Electronics,70,60,T011
+C0188,MA334,Linear Algebra,Mathematics,45,60,T044
+C0189,PH335,Applied Optics,Physics,45,60,T045
+C0190,ME336,Thermodynamics,Mechanical,45,60,T006
+C0191,CE337,Geotechnical Engineering,Civil,100,60,T047
+C0192,BU338,Operations Management,Business,30,60,T040
+C0193,CS341,Computer Networks,Computer Science,60,120,T057
+C0194,IT342,Information Security,Information Technology,35,60,T034
+C0195,EC343,Communication Systems,Electronics,30,60,T051
+C0196,MA344,Numerical Methods,Mathematics,30,60,T020
+C0197,PH345,Applied Optics,Physics,80,60,T005
+C0198,ME346,Thermodynamics,Mechanical,30,120,T038
+C0199,CE347,Surveying,Civil,70,120,T031
+C0200,BU348,Operations Management,Business,45,120,T024
+C0201,CS351,Programming Fundamentals,Computer Science,80,60,T025
+C0202,IT352,Mobile Application Development,Information Technology,40,60,T010
+C0203,EC353,Signals and Systems,Electronics,40,60,T011
+C0204,MA354,Linear Algebra,Mathematics,25,120,T060
+C0205,PH355,Modern Physics,Physics,45,60,T013
+C0206,ME356,Fluid Mechanics,Mechanical,100,60,T046
+C0207,CE357,Concrete Technology,Civil,30,60,T023
+C0208,BU358,Business Analytics,Business,55,60,T040
+C0209,CS361,Operating Systems,Computer Science,90,60,T033
+C0210,IT362,Cloud Computing,Information Technology,30,60,T018
+C0211,EC363,Microprocessors,Electronics,80,60,T059
+C0212,MA364,Engineering Mathematics,Mathematics,60,60,T052
+C0213,PH365,Electromagnetics,Physics,70,120,T029
+C0214,ME366,Engineering Mechanics,Mechanical,80,60,T030
+C0215,CE367,Geotechnical Engineering,Civil,80,60,T007
+C0216,BU368,Principles of Management,Business,40,60,T056
+C0217,CS371,Computer Networks,Computer Science,80,60,T017
+C0218,IT372,Web Technologies,Information Technology,70,120,T034
+C0219,EC373,Signals and Systems,Electronics,80,120,T059
+C0220,MA374,Engineering Mathematics,Mathematics,60,60,T052
+C0221,PH375,Electromagnetics,Physics,50,60,T053
+C0222,ME376,Thermodynamics,Mechanical,50,120,T046
+C0223,CE377,Concrete Technology,Civil,45,120,T055
+C0224,BU378,Principles of Management,Business,60,60,T024
+C0225,CS381,Computer Networks,Computer Science,50,60,T049
+C0226,IT382,Data Analytics,Information Technology,25,120,T050
+C0227,EC383,Digital Electronics,Electronics,40,60,T059
+C0228,MA384,Numerical Methods,Mathematics,25,60,T036
+C0229,PH385,Applied Optics,Physics,45,120,T045
+C0230,ME386,Manufacturing Processes,Mechanical,30,60,T046
+C0231,CE387,Surveying,Civil,100,60,T023
+C0232,BU388,Principles of Management,Business,70,120,T008
+C0233,CS391,Operating Systems,Computer Science,30,120,T009
+C0234,IT392,Mobile Application Development,Information Technology,35,120,T034
+C0235,EC393,Embedded Systems,Electronics,100,60,T051
+C0236,MA394,Numerical Methods,Mathematics,60,60,T060
+C0237,PH395,Applied Optics,Physics,55,60,T037
+C0238,ME396,Thermodynamics,Mechanical,30,60,T054
+C0239,CE397,Concrete Technology,Civil,50,60,T055
+C0240,BU398,Principles of Management,Business,45,60,T056
+C0241,CS401,Web Development,Computer Science,35,120,T057
+C0242,IT402,Information Security,Information Technology,50,120,T058
+C0243,EC403,Microprocessors,Electronics,40,60,T051
+C0244,MA404,Linear Algebra,Mathematics,55,60,T044
+C0245,PH405,Modern Physics,Physics,100,120,T029
+C0246,ME406,Thermodynamics,Mechanical,60,60,T014
+C0247,CE407,Geotechnical Engineering,Civil,30,120,T007
+C0248,BU408,Operations Management,Business,25,60,T032
+C0249,CS411,Database Systems,Computer Science,30,120,T033
+C0250,IT412,Information Security,Information Technology,80,120,T010
+C0251,EC413,Microprocessors,Electronics,90,120,T043
+C0252,MA414,Numerical Methods,Mathematics,70,60,T012
+C0253,PH415,Applied Optics,Physics,90,60,T013
+C0254,ME416,Engineering Mechanics,Mechanical,55,60,T054
+C0255,CE417,Structural Analysis,Civil,60,60,T047
+C0256,BU418,Financial Accounting,Business,25,60,T024
+C0257,CS421,Programming Fundamentals,Computer Science,45,60,T041
+C0258,IT422,Web Technologies,Information Technology,35,60,T050
+C0259,EC423,Embedded Systems,Electronics,90,60,T019
+C0260,MA424,Linear Algebra,Mathematics,30,120,T028
+C0261,PH425,Modern Physics,Physics,80,60,T013
+C0262,ME426,Manufacturing Processes,Mechanical,90,60,T030
+C0263,CE427,Geotechnical Engineering,Civil,90,60,T055
+C0264,BU428,Operations Management,Business,45,60,T008
+C0265,CS431,Web Development,Computer Science,50,60,T049
+C0266,IT432,Mobile Application Development,Information Technology,45,120,T034
+C0267,EC433,Signals and Systems,Electronics,55,120,T011
+C0268,MA434,Linear Algebra,Mathematics,55,60,T036
+C0269,PH435,Electromagnetics,Physics,25,120,T021
+C0270,ME436,Engineering Mechanics,Mechanical,80,60,T038
+C0271,CE437,Concrete Technology,Civil,45,60,T039
+C0272,BU438,Financial Accounting,Business,40,60,T040
+C0273,CS441,Computer Networks,Computer Science,90,60,T009
+C0274,IT442,Mobile Application Development,Information Technology,90,60,T034
+C0275,EC443,Communication Systems,Electronics,25,60,T019
+C0276,MA444,Engineering Mathematics,Mathematics,45,60,T052
+C0277,PH445,Applied Optics,Physics,40,60,T053
+C0278,ME446,Fluid Mechanics,Mechanical,70,60,T054
+C0279,CE447,Surveying,Civil,45,120,T055
+C0280,BU448,Financial Accounting,Business,100,60,T056
+C0281,CS451,Data Structures,Computer Science,60,60,T017
+C0282,IT452,Cloud Computing,Information Technology,90,120,T042
+C0283,EC453,Digital Electronics,Electronics,55,60,T035
+C0284,MA454,Discrete Mathematics,Mathematics,30,120,T044
+C0285,PH455,Electromagnetics,Physics,80,120,T053
+C0286,ME456,Fluid Mechanics,Mechanical,30,60,T030
+C0287,CE457,Structural Analysis,Civil,80,60,T039
+C0288,BU458,Business Analytics,Business,90,60,T048
+C0289,CS461,Web Development,Computer Science,100,60,T049
+C0290,IT462,Python Programming,Information Technology,35,60,T002
+C0291,EC463,Microprocessors,Electronics,60,60,T011
+C0292,MA464,Linear Algebra,Mathematics,70,60,T052
+C0293,PH465,Modern Physics,Physics,50,120,T037
+C0294,ME466,Thermodynamics,Mechanical,55,60,T054
+C0295,CE467,Concrete Technology,Civil,80,120,T023
+C0296,BU468,Principles of Management,Business,100,60,T016
+C0297,CS471,Web Development,Computer Science,60,60,T041
+C0298,IT472,Python Programming,Information Technology,90,60,T042
+C0299,EC473,Digital Electronics,Electronics,55,60,T027
+C0300,MA474,Engineering Mathematics,Mathematics,60,60,T028
+C0301,PH475,Engineering Physics,Physics,25,60,T013
+C0302,ME476,Thermodynamics,Mechanical,80,60,T006
+C0303,CE477,Surveying,Civil,80,60,T055
+C0304,BU478,Business Analytics,Business,50,60,T056
+C0305,CS481,Programming Fundamentals,Computer Science,45,60,T017
+C0306,IT482,Data Analytics,Information Technology,45,60,T010
+C0307,EC483,Digital Electronics,Electronics,35,60,T043
+C0308,MA484,Linear Algebra,Mathematics,80,60,T004
+C0309,PH485,Applied Optics,Physics,45,60,T013
+C0310,ME486,Manufacturing Processes,Mechanical,70,60,T046
+C0311,CE487,Structural Analysis,Civil,60,120,T055
+C0312,BU488,Financial Accounting,Business,70,60,T032
+C0313,CS491,Operating Systems,Computer Science,80,60,T033
+C0314,IT492,Web Technologies,Information Technology,90,60,T002
+C0315,EC493,Communication Systems,Electronics,55,120,T011
+C0316,MA494,Numerical Methods,Mathematics,100,120,T012
+C0317,PH495,Engineering Physics,Physics,50,60,T005
+C0318,ME496,Thermodynamics,Mechanical,45,60,T030
+C0319,CE497,Geotechnical Engineering,Civil,60,120,T007
+C0320,BU498,Principles of Management,Business,90,60,T032
+C0321,CS501,Web Development,Computer Science,40,120,T041
+C0322,IT502,Web Technologies,Information Technology,55,120,T010
+C0323,EC503,Microprocessors,Electronics,55,60,T035
+C0324,MA504,Probability and Statistics,Mathematics,35,120,T012
+C0325,PH505,Engineering Physics,Physics,30,60,T029
+C0326,ME506,Engineering Mechanics,Mechanical,100,60,T054
+C0327,CE507,Surveying,Civil,70,60,T039
+C0328,BU508,Financial Accounting,Business,90,60,T032
+C0329,CS511,Software Engineering,Computer Science,90,120,T001
+C0330,IT512,Information Security,Information Technology,80,60,T042
+C0331,EC513,Digital Electronics,Electronics,80,60,T019
+C0332,MA514,Numerical Methods,Mathematics,40,60,T044
+C0333,PH515,Electromagnetics,Physics,30,60,T037
+C0334,ME516,Thermodynamics,Mechanical,55,60,T038
+C0335,CE517,Geotechnical Engineering,Civil,25,60,T023
+C0336,BU518,Financial Accounting,Business,50,60,T008
+C0337,CS521,Database Systems,Computer Science,35,120,T009
+C0338,IT522,Cloud Computing,Information Technology,100,60,T010
+C0339,EC523,Embedded Systems,Electronics,40,120,T051
+C0340,MA524,Numerical Methods,Mathematics,50,60,T044
+C0341,PH525,Electromagnetics,Physics,100,60,T053
+C0342,ME526,Engineering Mechanics,Mechanical,25,60,T014
+C0343,CE527,Structural Analysis,Civil,90,60,T023
+C0344,BU528,Operations Management,Business,90,120,T032
+C0345,CS531,Web Development,Computer Science,55,60,T025
+C0346,IT532,Data Analytics,Information Technology,30,60,T050
+C0347,EC533,Digital Electronics,Electronics,45,120,T035
+C0348,MA534,Engineering Mathematics,Mathematics,40,120,T004
+C0349,PH535,Engineering Physics,Physics,40,60,T013
+C0350,ME536,Thermodynamics,Mechanical,45,60,T022
+C0351,CE537,Structural Analysis,Civil,25,120,T047
+C0352,BU538,Operations Management,Business,35,60,T032
+C0353,CS541,Operating Systems,Computer Science,70,60,T009
+C0354,IT542,Web Technologies,Information Technology,100,60,T050
+C0355,EC543,Digital Electronics,Electronics,60,60,T043
+C0356,MA544,Discrete Mathematics,Mathematics,55,120,T052
+C0357,PH545,Electromagnetics,Physics,30,120,T005
+C0358,ME546,Fluid Mechanics,Mechanical,35,120,T054
+C0359,CE547,Geotechnical Engineering,Civil,30,120,T055
+C0360,BU548,Principles of Management,Business,40,120,T040
+C0361,CS551,Artificial Intelligence,Computer Science,70,60,T049
+C0362,IT552,Information Security,Information Technology,100,60,T026
+C0363,EC553,Microprocessors,Electronics,35,60,T011
+C0364,MA554,Discrete Mathematics,Mathematics,70,60,T044
+C0365,PH555,Electromagnetics,Physics,100,60,T013
+C0366,ME556,Engineering Mechanics,Mechanical,35,60,T014
+C0367,CE557,Surveying,Civil,80,60,T055
+C0368,BU558,Principles of Management,Business,35,120,T032
+C0369,CS561,Web Development,Computer Science,90,60,T041
+C0370,IT562,Cloud Computing,Information Technology,60,60,T058
+C0371,EC563,Communication Systems,Electronics,90,60,T035
+C0372,MA564,Discrete Mathematics,Mathematics,25,60,T012
+C0373,PH565,Electromagnetics,Physics,60,120,T005
+C0374,ME566,Engineering Mechanics,Mechanical,50,60,T006
+C0375,CE567,Structural Analysis,Civil,80,120,T031
+C0376,BU568,Principles of Management,Business,60,60,T024
+C0377,CS571,Web Development,Computer Science,70,60,T001
+C0378,IT572,Web Technologies,Information Technology,30,60,T010
+C0379,EC573,Embedded Systems,Electronics,90,60,T003
+C0380,MA574,Linear Algebra,Mathematics,100,120,T060
+C0381,PH575,Applied Optics,Physics,50,60,T021
+C0382,ME576,Manufacturing Processes,Mechanical,55,60,T046
+C0383,CE577,Structural Analysis,Civil,90,60,T007
+C0384,BU578,Financial Accounting,Business,30,120,T024
+C0385,CS581,Computer Networks,Computer Science,100,60,T041
+C0386,IT582,Python Programming,Information Technology,80,60,T042
+C0387,EC583,Microprocessors,Electronics,90,120,T019
+C0388,MA584,Discrete Mathematics,Mathematics,100,60,T036
+C0389,PH585,Modern Physics,Physics,90,60,T053
+C0390,ME586,Thermodynamics,Mechanical,90,60,T046
+C0391,CE587,Concrete Technology,Civil,70,60,T007
+C0392,BU588,Financial Accounting,Business,45,60,T016
+C0393,CS591,Software Engineering,Computer Science,60,60,T025
+C0394,IT592,Cloud Computing,Information Technology,35,60,T034
+C0395,EC593,Digital Electronics,Electronics,70,60,T043
+C0396,MA594,Discrete Mathematics,Mathematics,35,120,T020
+C0397,PH595,Applied Optics,Physics,35,60,T045
+C0398,ME596,Manufacturing Processes,Mechanical,25,120,T022
+C0399,CE597,Surveying,Civil,60,60,T055
+C0400,BU598,Operations Management,Business,40,60,T024

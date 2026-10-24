@@ -1,0 +1,13 @@
+check,result,status,details
+Unique room IDs,63,PASS,
+Unique class IDs,896,PASS,
+Classes missing classLimit,0,PASS,
+Candidate room options referencing unknown room IDs,0,PASS,
+Candidate room options referencing unknown class IDs,0,PASS,
+Candidate time options referencing unknown class IDs,0,PASS,
+Group constraint links referencing unknown class IDs,0,PASS,
+Student offering links referencing an offering present in class table,0,PASS,Offering IDs are compared with class-level offering IDs; verify semantic scope before interpreting as data corruption.
+Duplicate candidate room rows,0,PASS,
+Duplicate candidate time rows,0,PASS,
+Room options with missing/non-numeric preference,0,PASS,
+Time options with missing/non-numeric preference,0,PASS,

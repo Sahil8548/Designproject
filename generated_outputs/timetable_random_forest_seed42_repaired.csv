@@ -1,0 +1,394 @@
+class_id,course_code,course_name,department,teacher_id,teacher_name,room_id,room_name,building,day,start_time,end_time,duration_minutes,student_count,room_capacity,ai_score
+C0251,EC413,"Microprocessors",Electronics,T043,"Meera Das",R002,"Room 002",Block A,Monday,08:00,10:00,120,90,100,0.99
+C0213,PH365,"Electromagnetics",Physics,T029,"Diya Nair",R004,"Room 004",Block A,Monday,08:00,10:00,120,70,70,0.99
+C0126,ME256,"Manufacturing Processes",Mechanical,T014,"Ananya Iyer",R001,"Room 001",Block A,Monday,08:00,10:00,120,60,60,0.99
+C0266,IT432,"Mobile Application Development",Information Technology,T034,"Kabir Patel",R006,"Room 006",Block A,Monday,08:00,10:00,120,45,50,0.99
+C0321,CS501,"Web Development",Computer Science,T041,"Meera Sharma",R003,"Room 003",Block A,Monday,08:00,10:00,120,40,40,0.99
+C0359,CE547,"Geotechnical Engineering",Civil,T055,"Rohan Khan",R008,"Room 008",Block A,Monday,08:00,10:00,120,30,30,0.99
+C0013,PH115,"Applied Optics",Physics,T005,"Aarav Nair",R005,"Room 005",Block A,Monday,08:00,09:00,60,100,120,0.99
+C0209,CS361,"Operating Systems",Computer Science,T033,"Kabir Sharma",R010,"Room 010",Block A,Monday,08:00,09:00,60,90,100,0.99
+C0096,BU218,"Operations Management",Business,T016,"Ananya Singh",R007,"Room 007",Block A,Monday,08:00,09:00,60,80,80,0.99
+C0292,MA464,"Linear Algebra",Mathematics,T052,"Rohan Rao",R012,"Room 012",Block B,Monday,08:00,09:00,60,70,70,0.99
+C0065,CS181,"Computer Networks",Computer Science,T049,"Rohan Sharma",R009,"Room 009",Block A,Monday,08:00,09:00,60,60,60,0.99
+C0067,EC183,"Signals and Systems",Electronics,T003,"Aarav Das",R014,"Room 014",Block B,Monday,08:00,09:00,60,45,50,0.99
+C0202,IT352,"Mobile Application Development",Information Technology,T010,"Ananya Patel",R011,"Room 011",Block B,Monday,08:00,09:00,60,40,40,0.99
+C0021,PH125,"Electromagnetics",Physics,T053,"Rohan Nair",R016,"Room 016",Block B,Monday,08:00,09:00,60,25,30,0.99
+C0019,EC123,"Embedded Systems",Electronics,T019,"Ishaan Das",R005,"Room 005",Block A,Monday,09:00,10:00,60,100,120,0.99
+C0105,CS231,"Artificial Intelligence",Computer Science,T001,"Aarav Sharma",R010,"Room 010",Block A,Monday,09:00,10:00,60,90,100,0.99
+C0092,MA214,"Probability and Statistics",Mathematics,T052,"Rohan Rao",R007,"Room 007",Block A,Monday,09:00,10:00,60,80,80,0.99
+C0166,ME306,"Manufacturing Processes",Mechanical,T030,"Diya Iyer",R009,"Room 009",Block A,Monday,09:00,10:00,60,60,60,0.99
+C0175,CE317,"Geotechnical Engineering",Civil,T039,"Kabir Khan",R012,"Room 012",Block B,Monday,09:00,10:00,60,50,70,0.99
+C0088,BU208,"Operations Management",Business,T008,"Aarav Singh",R014,"Room 014",Block B,Monday,09:00,10:00,60,45,50,0.99
+C0155,EC293,"Digital Electronics",Electronics,T003,"Aarav Das",R011,"Room 011",Block B,Monday,09:00,10:00,60,40,40,0.99
+C0110,ME236,"Manufacturing Processes",Mechanical,T022,"Ishaan Iyer",R016,"Room 016",Block B,Monday,09:00,10:00,60,25,30,0.99
+C0004,MA104,"Engineering Mathematics",Mathematics,T004,"Aarav Rao",R017,"Room 017",Block B,Monday,10:00,11:00,60,40,60,0.99
+C0380,MA574,"Linear Algebra",Mathematics,T060,"Sana Rao",R002,"Room 002",Block A,Monday,10:00,12:00,120,100,100,0.99
+C0232,BU388,"Principles of Management",Business,T008,"Aarav Singh",R004,"Room 004",Block A,Monday,10:00,12:00,120,70,70,0.99
+C0373,PH565,"Electromagnetics",Physics,T005,"Aarav Nair",R001,"Room 001",Block A,Monday,10:00,12:00,120,60,60,0.99
+C0223,CE377,"Concrete Technology",Civil,T055,"Rohan Khan",R006,"Room 006",Block A,Monday,10:00,12:00,120,45,50,0.99
+C0063,CE177,"Concrete Technology",Civil,T007,"Aarav Khan",R003,"Room 003",Block A,Monday,10:00,12:00,120,40,40,0.99
+C0041,CS151,"Data Structures",Computer Science,T009,"Ananya Sharma",R008,"Room 008",Block A,Monday,10:00,12:00,120,30,30,0.99
+C0326,ME506,"Engineering Mechanics",Mechanical,T054,"Rohan Iyer",R005,"Room 005",Block A,Monday,10:00,11:00,60,100,120,0.99
+C0371,EC563,"Communication Systems",Electronics,T035,"Kabir Das",R010,"Room 010",Block A,Monday,10:00,11:00,60,90,100,0.99
+C0386,IT582,"Python Programming",Information Technology,T042,"Meera Patel",R007,"Room 007",Block A,Monday,10:00,11:00,60,80,80,0.99
+C0312,BU488,"Financial Accounting",Business,T032,"Diya Singh",R012,"Room 012",Block B,Monday,10:00,11:00,60,70,70,0.99
+C0179,EC323,"Communication Systems",Electronics,T011,"Ananya Das",R009,"Room 009",Block A,Monday,10:00,11:00,60,60,60,0.99
+C0189,PH335,"Applied Optics",Physics,T045,"Meera Nair",R014,"Room 014",Block B,Monday,10:00,11:00,60,45,50,0.99
+C0058,IT172,"Cloud Computing",Information Technology,T058,"Sana Patel",R011,"Room 011",Block B,Monday,10:00,11:00,60,40,40,0.99
+C0164,MA304,"Discrete Mathematics",Mathematics,T052,"Rohan Rao",R016,"Room 016",Block B,Monday,10:00,11:00,60,25,30,0.99
+C0012,MA114,"Numerical Methods",Mathematics,T044,"Meera Rao",R009,"Room 009",Block A,Monday,11:00,12:00,60,30,60,0.47
+C0191,CE337,"Geotechnical Engineering",Civil,T047,"Meera Khan",R005,"Room 005",Block A,Monday,11:00,12:00,60,100,120,0.99
+C0074,IT192,"Web Technologies",Information Technology,T034,"Kabir Patel",R010,"Room 010",Block A,Monday,11:00,12:00,60,90,100,0.99
+C0214,ME366,"Engineering Mechanics",Mechanical,T030,"Diya Iyer",R007,"Room 007",Block A,Monday,11:00,12:00,60,80,80,0.99
+C0208,BU358,"Business Analytics",Business,T040,"Kabir Singh",R012,"Room 012",Block B,Monday,11:00,12:00,60,55,70,0.99
+C0099,EC223,"Signals and Systems",Electronics,T011,"Ananya Das",R014,"Room 014",Block B,Monday,11:00,12:00,60,45,50,0.99
+C0133,PH265,"Electromagnetics",Physics,T053,"Rohan Nair",R011,"Room 011",Block B,Monday,11:00,12:00,60,40,40,0.99
+C0050,IT162,"Python Programming",Information Technology,T010,"Ananya Patel",R016,"Room 016",Block B,Monday,11:00,12:00,60,25,30,0.99
+C0344,BU528,"Operations Management",Business,T032,"Diya Singh",R002,"Room 002",Block A,Monday,12:00,14:00,120,90,100,0.99
+C0295,CE467,"Concrete Technology",Civil,T023,"Ishaan Khan",R007,"Room 007",Block A,Monday,12:00,14:00,120,80,80,0.99
+C0193,CS341,"Computer Networks",Computer Science,T057,"Sana Sharma",R001,"Room 001",Block A,Monday,12:00,14:00,120,60,60,0.99
+C0055,CE167,"Concrete Technology",Civil,T055,"Rohan Khan",R004,"Room 004",Block A,Monday,12:00,14:00,120,55,70,0.99
+C0161,CS301,"Programming Fundamentals",Computer Science,T049,"Rohan Sharma",R006,"Room 006",Block A,Monday,12:00,14:00,120,45,50,0.99
+C0339,EC523,"Embedded Systems",Electronics,T051,"Rohan Das",R003,"Room 003",Block A,Monday,12:00,14:00,120,40,40,0.99
+C0338,IT522,"Cloud Computing",Information Technology,T010,"Ananya Patel",R005,"Room 005",Block A,Monday,12:00,13:00,60,100,120,0.99
+C0056,BU168,"Principles of Management",Business,T008,"Aarav Singh",R010,"Room 010",Block A,Monday,12:00,13:00,60,90,100,0.99
+C0259,EC423,"Embedded Systems",Electronics,T019,"Ishaan Das",R018,"Room 018",Block B,Monday,12:00,13:00,60,90,100,0.99
+C0376,BU568,"Principles of Management",Business,T024,"Ishaan Singh",R009,"Room 009",Block A,Monday,12:00,13:00,60,60,60,0.99
+C0381,PH575,"Applied Optics",Physics,T021,"Ishaan Nair",R012,"Room 012",Block B,Monday,12:00,13:00,60,50,70,0.99
+C0087,CE207,"Concrete Technology",Civil,T007,"Aarav Khan",R014,"Room 014",Block B,Monday,12:00,13:00,60,45,50,0.99
+C0272,BU438,"Financial Accounting",Business,T040,"Kabir Singh",R011,"Room 011",Block B,Monday,12:00,13:00,60,40,40,0.99
+C0286,ME456,"Fluid Mechanics",Mechanical,T030,"Diya Iyer",R008,"Room 008",Block A,Monday,12:00,13:00,60,30,30,0.99
+C0070,ME186,"Thermodynamics",Mechanical,T054,"Rohan Iyer",R016,"Room 016",Block B,Monday,12:00,13:00,60,25,30,0.99
+C0233,CS391,"Operating Systems",Computer Science,T009,"Ananya Sharma",R008,"Room 008",Block A,Monday,13:00,15:00,120,30,30,0.99
+C0388,MA584,"Discrete Mathematics",Mathematics,T036,"Kabir Rao",R005,"Room 005",Block A,Monday,13:00,14:00,60,100,120,0.99
+C0298,IT472,"Python Programming",Information Technology,T042,"Meera Patel",R010,"Room 010",Block A,Monday,13:00,14:00,60,90,100,0.99
+C0300,MA474,"Engineering Mathematics",Mathematics,T028,"Diya Rao",R009,"Room 009",Block A,Monday,13:00,14:00,60,60,60,0.99
+C0077,PH195,"Modern Physics",Physics,T005,"Aarav Nair",R012,"Room 012",Block B,Monday,13:00,14:00,60,50,70,0.99
+C0264,BU428,"Operations Management",Business,T008,"Aarav Singh",R014,"Room 014",Block B,Monday,13:00,14:00,60,45,50,0.99
+C0051,EC163,"Embedded Systems",Electronics,T059,"Sana Das",R011,"Room 011",Block B,Monday,13:00,14:00,60,40,40,0.99
+C0387,EC583,"Microprocessors",Electronics,T019,"Ishaan Das",R002,"Room 002",Block A,Monday,14:00,16:00,120,90,100,0.99
+C0250,IT412,"Information Security",Information Technology,T010,"Ananya Patel",R007,"Room 007",Block A,Monday,14:00,16:00,120,80,80,0.99
+C0315,EC493,"Communication Systems",Electronics,T011,"Ananya Das",R001,"Room 001",Block A,Monday,14:00,16:00,120,55,60,0.99
+C0200,BU348,"Operations Management",Business,T024,"Ishaan Singh",R006,"Room 006",Block A,Monday,14:00,16:00,120,45,50,0.99
+C0360,BU548,"Principles of Management",Business,T040,"Kabir Singh",R003,"Room 003",Block A,Monday,14:00,16:00,120,40,40,0.99
+C0235,EC393,"Embedded Systems",Electronics,T051,"Rohan Das",R005,"Room 005",Block A,Monday,14:00,15:00,60,100,120,0.99
+C0122,IT252,"Cloud Computing",Information Technology,T026,"Diya Patel",R010,"Room 010",Block A,Monday,14:00,15:00,60,90,100,0.99
+C0044,MA154,"Linear Algebra",Mathematics,T036,"Kabir Rao",R004,"Room 004",Block A,Monday,14:00,15:00,60,70,70,0.99
+C0119,CE247,"Concrete Technology",Civil,T039,"Kabir Khan",R009,"Room 009",Block A,Monday,14:00,15:00,60,60,60,0.99
+C0374,ME566,"Engineering Mechanics",Mechanical,T006,"Aarav Iyer",R012,"Room 012",Block B,Monday,14:00,15:00,60,50,70,0.99
+C0257,CS421,"Programming Fundamentals",Computer Science,T041,"Meera Sharma",R014,"Room 014",Block B,Monday,14:00,15:00,60,45,50,0.99
+C0258,IT422,"Web Technologies",Information Technology,T050,"Rohan Patel",R011,"Room 011",Block B,Monday,14:00,15:00,60,35,40,0.99
+C0248,BU408,"Operations Management",Business,T032,"Diya Singh",R016,"Room 016",Block B,Monday,14:00,15:00,60,25,30,0.99
+C0206,ME356,"Fluid Mechanics",Mechanical,T046,"Meera Iyer",R005,"Room 005",Block A,Monday,15:00,16:00,60,100,120,0.99
+C0343,CE527,"Structural Analysis",Civil,T023,"Ishaan Khan",R010,"Room 010",Block A,Monday,15:00,16:00,60,90,100,0.99
+C0364,MA554,"Discrete Mathematics",Mathematics,T044,"Meera Rao",R004,"Room 004",Block A,Monday,15:00,16:00,60,70,70,0.99
+C0370,IT562,"Cloud Computing",Information Technology,T058,"Sana Patel",R009,"Room 009",Block A,Monday,15:00,16:00,60,60,60,0.99
+C0014,ME116,"Thermodynamics",Mechanical,T054,"Rohan Iyer",R014,"Room 014",Block B,Monday,15:00,16:00,60,45,50,0.99
+C0349,PH535,"Engineering Physics",Physics,T013,"Ananya Nair",R011,"Room 011",Block B,Monday,15:00,16:00,60,40,40,0.99
+C0333,PH515,"Electromagnetics",Physics,T037,"Kabir Nair",R008,"Room 008",Block A,Monday,15:00,16:00,60,30,30,0.99
+C0342,ME526,"Engineering Mechanics",Mechanical,T014,"Ananya Iyer",R016,"Room 016",Block B,Monday,15:00,16:00,60,25,30,0.99
+C0282,IT452,"Cloud Computing",Information Technology,T042,"Meera Patel",R002,"Room 002",Block A,Tuesday,08:00,10:00,120,90,100,0.99
+C0172,MA314,"Linear Algebra",Mathematics,T044,"Meera Rao",R001,"Room 001",Block A,Tuesday,08:00,10:00,120,60,60,0.99
+C0115,EC243,"Signals and Systems",Electronics,T019,"Ishaan Das",R004,"Room 004",Block A,Tuesday,08:00,10:00,120,55,70,0.99
+C0279,CE447,"Surveying",Civil,T055,"Rohan Khan",R006,"Room 006",Block A,Tuesday,08:00,10:00,120,45,50,0.99
+C0324,MA504,"Probability and Statistics",Mathematics,T012,"Ananya Rao",R003,"Room 003",Block A,Tuesday,08:00,10:00,120,35,40,0.99
+C0054,ME166,"Engineering Mechanics",Mechanical,T022,"Ishaan Iyer",R008,"Room 008",Block A,Tuesday,08:00,10:00,120,30,30,0.99
+C0138,IT272,"Web Technologies",Information Technology,T026,"Diya Patel",R005,"Room 005",Block A,Tuesday,08:00,09:00,60,100,120,0.99
+C0262,ME426,"Manufacturing Processes",Mechanical,T030,"Diya Iyer",R010,"Room 010",Block A,Tuesday,08:00,09:00,60,90,100,0.99
+C0116,MA244,"Discrete Mathematics",Mathematics,T052,"Rohan Rao",R007,"Room 007",Block A,Tuesday,08:00,09:00,60,80,80,0.99
+C0246,ME406,"Thermodynamics",Mechanical,T014,"Ananya Iyer",R009,"Room 009",Block A,Tuesday,08:00,09:00,60,60,60,0.99
+C0268,MA434,"Linear Algebra",Mathematics,T036,"Kabir Rao",R012,"Room 012",Block B,Tuesday,08:00,09:00,60,55,70,0.99
+C0183,CE327,"Concrete Technology",Civil,T023,"Ishaan Khan",R014,"Room 014",Block B,Tuesday,08:00,09:00,60,45,50,0.99
+C0040,BU148,"Financial Accounting",Business,T016,"Ananya Singh",R011,"Room 011",Block B,Tuesday,08:00,09:00,60,40,40,0.99
+C0028,MA134,"Engineering Mathematics",Mathematics,T020,"Ishaan Rao",R016,"Room 016",Block B,Tuesday,08:00,09:00,60,25,30,0.99
+C0362,IT552,"Information Security",Information Technology,T026,"Diya Patel",R005,"Room 005",Block A,Tuesday,09:00,10:00,60,100,120,0.99
+C0320,BU498,"Principles of Management",Business,T032,"Diya Singh",R010,"Room 010",Block A,Tuesday,09:00,10:00,60,90,100,0.99
+C0308,MA484,"Linear Algebra",Mathematics,T004,"Aarav Rao",R007,"Room 007",Block A,Tuesday,09:00,10:00,60,80,80,0.99
+C0128,BU258,"Principles of Management",Business,T016,"Ananya Singh",R009,"Room 009",Block A,Tuesday,09:00,10:00,60,55,60,0.99
+C0225,CS381,"Computer Networks",Computer Science,T049,"Rohan Sharma",R012,"Room 012",Block B,Tuesday,09:00,10:00,60,50,70,0.99
+C0205,PH355,"Modern Physics",Physics,T013,"Ananya Nair",R014,"Room 014",Block B,Tuesday,09:00,10:00,60,45,50,0.99
+C0277,PH445,"Applied Optics",Physics,T053,"Rohan Nair",R011,"Room 011",Block B,Tuesday,09:00,10:00,60,40,40,0.99
+C0093,PH215,"Applied Optics",Physics,T021,"Ishaan Nair",R016,"Room 016",Block B,Tuesday,09:00,10:00,60,25,30,0.99
+C0029,PH135,"Applied Optics",Physics,T037,"Kabir Nair",R002,"Room 002",Block A,Tuesday,10:00,12:00,120,90,100,0.99
+C0199,CE347,"Surveying",Civil,T031,"Diya Khan",R004,"Room 004",Block A,Tuesday,10:00,12:00,120,70,70,0.99
+C0141,PH275,"Applied Optics",Physics,T053,"Rohan Nair",R001,"Room 001",Block A,Tuesday,10:00,12:00,120,55,60,0.99
+C0152,BU288,"Operations Management",Business,T024,"Ishaan Singh",R006,"Room 006",Block A,Tuesday,10:00,12:00,120,45,50,0.99
+C0081,CS201,"Computer Networks",Computer Science,T033,"Kabir Sharma",R003,"Room 003",Block A,Tuesday,10:00,12:00,120,35,40,0.99
+C0204,MA354,"Linear Algebra",Mathematics,T060,"Sana Rao",R008,"Room 008",Block A,Tuesday,10:00,12:00,120,25,30,0.99
+C0185,CS331,"Data Structures",Computer Science,T025,"Diya Sharma",R005,"Room 005",Block A,Tuesday,10:00,11:00,60,100,120,0.99
+C0328,BU508,"Financial Accounting",Business,T032,"Diya Singh",R010,"Room 010",Block A,Tuesday,10:00,11:00,60,90,100,0.99
+C0215,CE367,"Geotechnical Engineering",Civil,T007,"Aarav Khan",R007,"Room 007",Block A,Tuesday,10:00,11:00,60,80,80,0.99
+C0382,ME576,"Manufacturing Processes",Mechanical,T046,"Meera Iyer",R009,"Room 009",Block A,Tuesday,10:00,11:00,60,55,60,0.99
+C0317,PH495,"Engineering Physics",Physics,T005,"Aarav Nair",R012,"Room 012",Block B,Tuesday,10:00,11:00,60,50,70,0.99
+C0309,PH485,"Applied Optics",Physics,T013,"Ananya Nair",R014,"Room 014",Block B,Tuesday,10:00,11:00,60,45,50,0.99
+C0174,ME316,"Manufacturing Processes",Mechanical,T054,"Rohan Iyer",R011,"Room 011",Block B,Tuesday,10:00,11:00,60,40,40,0.99
+C0228,MA384,"Numerical Methods",Mathematics,T036,"Kabir Rao",R016,"Room 016",Block B,Tuesday,10:00,11:00,60,25,30,0.99
+C0018,IT122,"Mobile Application Development",Information Technology,T018,"Ishaan Patel",R010,"Room 010",Block A,Tuesday,11:00,12:00,60,90,100,0.99
+C0201,CS351,"Programming Fundamentals",Computer Science,T025,"Diya Sharma",R007,"Room 007",Block A,Tuesday,11:00,12:00,60,80,80,0.99
+C0323,EC503,"Microprocessors",Electronics,T035,"Kabir Das",R009,"Room 009",Block A,Tuesday,11:00,12:00,60,55,60,0.99
+C0188,MA334,"Linear Algebra",Mathematics,T044,"Meera Rao",R014,"Room 014",Block B,Tuesday,11:00,12:00,60,45,50,0.99
+C0086,ME206,"Fluid Mechanics",Mechanical,T038,"Kabir Iyer",R011,"Room 011",Block B,Tuesday,11:00,12:00,60,40,40,0.99
+C0275,EC443,"Communication Systems",Electronics,T019,"Ishaan Das",R016,"Room 016",Block B,Tuesday,11:00,12:00,60,25,30,0.99
+C0186,IT332,"Cloud Computing",Information Technology,T034,"Kabir Patel",R002,"Room 002",Block A,Tuesday,12:00,14:00,120,100,100,0.99
+C0222,ME376,"Thermodynamics",Mechanical,T046,"Meera Iyer",R004,"Room 004",Block A,Tuesday,12:00,14:00,120,50,70,0.99
+C0229,PH385,"Applied Optics",Physics,T045,"Meera Nair",R006,"Room 006",Block A,Tuesday,12:00,14:00,120,45,50,0.99
+C0348,MA534,"Engineering Mathematics",Mathematics,T004,"Aarav Rao",R003,"Room 003",Block A,Tuesday,12:00,14:00,120,40,40,0.99
+C0269,PH435,"Electromagnetics",Physics,T021,"Ishaan Nair",R008,"Room 008",Block A,Tuesday,12:00,14:00,120,25,30,0.99
+C0120,BU248,"Operations Management",Business,T048,"Meera Singh",R005,"Room 005",Block A,Tuesday,12:00,13:00,60,100,120,0.99
+C0157,PH295,"Modern Physics",Physics,T037,"Kabir Nair",R010,"Room 010",Block A,Tuesday,12:00,13:00,60,90,100,0.99
+C0211,EC363,"Microprocessors",Electronics,T059,"Sana Das",R007,"Room 007",Block A,Tuesday,12:00,13:00,60,80,80,0.99
+C0147,EC283,"Signals and Systems",Electronics,T003,"Aarav Das",R001,"Room 001",Block A,Tuesday,12:00,13:00,60,60,60,0.99
+C0355,EC543,"Digital Electronics",Electronics,T043,"Meera Das",R009,"Room 009",Block A,Tuesday,12:00,13:00,60,60,60,0.99
+C0304,BU478,"Business Analytics",Business,T056,"Rohan Singh",R012,"Room 012",Block B,Tuesday,12:00,13:00,60,50,70,0.99
+C0276,MA444,"Engineering Mathematics",Mathematics,T052,"Rohan Rao",R014,"Room 014",Block B,Tuesday,12:00,13:00,60,45,50,0.99
+C0162,IT302,"Mobile Application Development",Information Technology,T026,"Diya Patel",R011,"Room 011",Block B,Tuesday,12:00,13:00,60,40,40,0.99
+C0372,MA564,"Discrete Mathematics",Mathematics,T012,"Ananya Rao",R016,"Room 016",Block B,Tuesday,12:00,13:00,60,25,30,0.99
+C0053,PH165,"Applied Optics",Physics,T013,"Ananya Nair",R001,"Room 001",Block A,Tuesday,13:00,15:00,120,60,60,0.99
+C0049,CS161,"Data Structures",Computer Science,T025,"Diya Sharma",R005,"Room 005",Block A,Tuesday,13:00,14:00,60,100,120,0.99
+C0263,CE427,"Geotechnical Engineering",Civil,T055,"Rohan Khan",R010,"Room 010",Block A,Tuesday,13:00,14:00,60,90,100,0.99
+C0073,CS191,"Operating Systems",Computer Science,T009,"Ananya Sharma",R007,"Room 007",Block A,Tuesday,13:00,14:00,60,80,80,0.99
+C0168,BU308,"Business Analytics",Business,T048,"Meera Singh",R009,"Room 009",Block A,Tuesday,13:00,14:00,60,55,60,0.99
+C0340,MA524,"Numerical Methods",Mathematics,T044,"Meera Rao",R012,"Room 012",Block B,Tuesday,13:00,14:00,60,50,70,0.99
+C0306,IT482,"Data Analytics",Information Technology,T010,"Ananya Patel",R014,"Room 014",Block B,Tuesday,13:00,14:00,60,45,50,0.99
+C0203,EC353,"Signals and Systems",Electronics,T011,"Ananya Das",R011,"Room 011",Block B,Tuesday,13:00,14:00,60,40,40,0.99
+C0256,BU418,"Financial Accounting",Business,T024,"Ishaan Singh",R016,"Room 016",Block B,Tuesday,13:00,14:00,60,25,30,0.99
+C0316,MA494,"Numerical Methods",Mathematics,T012,"Ananya Rao",R002,"Room 002",Block A,Tuesday,14:00,16:00,120,100,100,0.99
+C0234,IT392,"Mobile Application Development",Information Technology,T034,"Kabir Patel",R003,"Room 003",Block A,Tuesday,14:00,16:00,120,35,40,0.99
+C0107,EC233,"Digital Electronics",Electronics,T043,"Meera Das",R006,"Room 006",Block A,Tuesday,14:00,16:00,120,30,50,0.99
+C0100,MA224,"Numerical Methods",Mathematics,T028,"Diya Rao",R008,"Room 008",Block A,Tuesday,14:00,16:00,120,25,30,0.99
+C0057,CS171,"Artificial Intelligence",Computer Science,T009,"Ananya Sharma",R005,"Room 005",Block A,Tuesday,14:00,15:00,60,100,120,0.99
+C0112,BU238,"Financial Accounting",Business,T048,"Meera Singh",R010,"Room 010",Block A,Tuesday,14:00,15:00,60,90,100,0.99
+C0197,PH345,"Applied Optics",Physics,T005,"Aarav Nair",R007,"Room 007",Block A,Tuesday,14:00,15:00,60,80,80,0.99
+C0278,ME446,"Fluid Mechanics",Mechanical,T054,"Rohan Iyer",R004,"Room 004",Block A,Tuesday,14:00,15:00,60,70,70,0.99
+C0299,EC473,"Digital Electronics",Electronics,T027,"Diya Das",R009,"Room 009",Block A,Tuesday,14:00,15:00,60,55,60,0.99
+C0094,ME216,"Engineering Mechanics",Mechanical,T046,"Meera Iyer",R012,"Room 012",Block B,Tuesday,14:00,15:00,60,50,70,0.99
+C0109,PH235,"Applied Optics",Physics,T045,"Meera Nair",R014,"Room 014",Block B,Tuesday,14:00,15:00,60,45,50,0.99
+C0083,EC203,"Digital Electronics",Electronics,T011,"Ananya Das",R011,"Room 011",Block B,Tuesday,14:00,15:00,60,35,40,0.99
+C0314,IT492,"Web Technologies",Information Technology,T002,"Aarav Patel",R010,"Room 010",Block A,Tuesday,15:00,16:00,60,90,100,0.99
+C0217,CS371,"Computer Networks",Computer Science,T017,"Ishaan Sharma",R007,"Room 007",Block A,Tuesday,15:00,16:00,60,80,80,0.99
+C0391,CE587,"Concrete Technology",Civil,T007,"Aarav Khan",R004,"Room 004",Block A,Tuesday,15:00,16:00,60,70,70,0.99
+C0151,CE287,"Surveying",Civil,T023,"Ishaan Khan",R001,"Room 001",Block A,Tuesday,15:00,16:00,60,60,60,0.99
+C0254,ME416,"Engineering Mechanics",Mechanical,T054,"Rohan Iyer",R009,"Room 009",Block A,Tuesday,15:00,16:00,60,55,60,0.99
+C0117,PH245,"Engineering Physics",Physics,T013,"Ananya Nair",R014,"Room 014",Block B,Tuesday,15:00,16:00,60,45,50,0.99
+C0102,ME226,"Thermodynamics",Mechanical,T046,"Meera Iyer",R011,"Room 011",Block B,Tuesday,15:00,16:00,60,40,40,0.99
+C0132,MA264,"Linear Algebra",Mathematics,T060,"Sana Rao",R002,"Room 002",Block A,Wednesday,08:00,10:00,120,100,100,0.99
+C0026,IT132,"Mobile Application Development",Information Technology,T050,"Rohan Patel",R007,"Room 007",Block A,Wednesday,08:00,10:00,120,80,80,0.99
+C0218,IT372,"Web Technologies",Information Technology,T034,"Kabir Patel",R004,"Room 004",Block A,Wednesday,08:00,10:00,120,70,70,0.99
+C0319,CE497,"Geotechnical Engineering",Civil,T007,"Aarav Khan",R001,"Room 001",Block A,Wednesday,08:00,10:00,120,60,60,0.99
+C0145,CS281,"Operating Systems",Computer Science,T057,"Sana Sharma",R006,"Room 006",Block A,Wednesday,08:00,10:00,120,45,50,0.99
+C0180,MA324,"Probability and Statistics",Mathematics,T028,"Diya Rao",R003,"Room 003",Block A,Wednesday,08:00,10:00,120,40,40,0.99
+C0069,PH185,"Engineering Physics",Physics,T037,"Kabir Nair",R008,"Room 008",Block A,Wednesday,08:00,10:00,120,25,30,0.99
+C0170,IT312,"Web Technologies",Information Technology,T042,"Meera Patel",R005,"Room 005",Block A,Wednesday,08:00,09:00,60,100,120,0.99
+C0075,EC193,"Signals and Systems",Electronics,T027,"Diya Das",R010,"Room 010",Block A,Wednesday,08:00,09:00,60,90,100,0.99
+C0153,CS291,"Data Structures",Computer Science,T001,"Aarav Sharma",R009,"Room 009",Block A,Wednesday,08:00,09:00,60,60,60,0.99
+C0047,CE157,"Structural Analysis",Civil,T039,"Kabir Khan",R012,"Room 012",Block B,Wednesday,08:00,09:00,60,50,70,0.99
+C0392,BU588,"Financial Accounting",Business,T016,"Ananya Singh",R014,"Room 014",Block B,Wednesday,08:00,09:00,60,45,50,0.99
+C0227,EC383,"Digital Electronics",Electronics,T059,"Sana Das",R011,"Room 011",Block B,Wednesday,08:00,09:00,60,40,40,0.99
+C0129,CS261,"Web Development",Computer Science,T009,"Ananya Sharma",R016,"Room 016",Block B,Wednesday,08:00,09:00,60,25,30,0.99
+C0296,BU468,"Principles of Management",Business,T016,"Ananya Singh",R005,"Room 005",Block A,Wednesday,09:00,10:00,60,100,120,0.99
+C0379,EC573,"Embedded Systems",Electronics,T003,"Aarav Das",R010,"Room 010",Block A,Wednesday,09:00,10:00,60,90,100,0.99
+C0345,CS531,"Web Development",Computer Science,T025,"Diya Sharma",R009,"Room 009",Block A,Wednesday,09:00,10:00,60,55,60,0.99
+C0143,CE277,"Structural Analysis",Civil,T055,"Rohan Khan",R012,"Room 012",Block B,Wednesday,09:00,10:00,60,50,70,0.99
+C0318,ME496,"Thermodynamics",Mechanical,T030,"Diya Iyer",R014,"Room 014",Block B,Wednesday,09:00,10:00,60,45,50,0.99
+C0216,BU368,"Principles of Management",Business,T056,"Rohan Singh",R011,"Room 011",Block B,Wednesday,09:00,10:00,60,40,40,0.99
+C0061,PH175,"Engineering Physics",Physics,T005,"Aarav Nair",R016,"Room 016",Block B,Wednesday,09:00,10:00,60,25,30,0.99
+C0245,PH405,"Modern Physics",Physics,T029,"Diya Nair",R002,"Room 002",Block A,Wednesday,10:00,12:00,120,100,100,0.99
+C0375,CE567,"Structural Analysis",Civil,T031,"Diya Khan",R007,"Room 007",Block A,Wednesday,10:00,12:00,120,80,80,0.99
+C0356,MA544,"Discrete Mathematics",Mathematics,T052,"Rohan Rao",R001,"Room 001",Block A,Wednesday,10:00,12:00,120,55,60,0.99
+C0293,PH465,"Modern Physics",Physics,T037,"Kabir Nair",R004,"Room 004",Block A,Wednesday,10:00,12:00,120,50,70,0.99
+C0226,IT382,"Data Analytics",Information Technology,T050,"Rohan Patel",R008,"Room 008",Block A,Wednesday,10:00,12:00,120,25,30,0.99
+C0163,EC303,"Digital Electronics",Electronics,T011,"Ananya Das",R005,"Room 005",Block A,Wednesday,10:00,11:00,60,100,120,0.99
+C0033,CS141,"Computer Networks",Computer Science,T009,"Ananya Sharma",R010,"Room 010",Block A,Wednesday,10:00,11:00,60,90,100,0.99
+C0020,MA124,"Numerical Methods",Mathematics,T028,"Diya Rao",R009,"Room 009",Block A,Wednesday,10:00,11:00,60,55,60,0.99
+C0265,CS431,"Web Development",Computer Science,T049,"Rohan Sharma",R006,"Room 006",Block A,Wednesday,10:00,11:00,60,50,50,0.99
+C0136,BU268,"Financial Accounting",Business,T040,"Kabir Singh",R012,"Room 012",Block B,Wednesday,10:00,11:00,60,50,70,0.99
+C0240,BU398,"Principles of Management",Business,T056,"Rohan Singh",R014,"Room 014",Block B,Wednesday,10:00,11:00,60,45,50,0.99
+C0332,MA514,"Numerical Methods",Mathematics,T044,"Meera Rao",R003,"Room 003",Block A,Wednesday,10:00,11:00,60,40,40,0.99
+C0243,EC403,"Microprocessors",Electronics,T051,"Rohan Das",R011,"Room 011",Block B,Wednesday,10:00,11:00,60,40,40,0.99
+C0238,ME396,"Thermodynamics",Mechanical,T054,"Rohan Iyer",R016,"Room 016",Block B,Wednesday,10:00,11:00,60,30,30,0.99
+C0150,ME286,"Engineering Mechanics",Mechanical,T022,"Ishaan Iyer",R006,"Room 006",Block A,Wednesday,11:00,13:00,120,45,50,0.99
+C0062,ME176,"Thermodynamics",Mechanical,T030,"Diya Iyer",R003,"Room 003",Block A,Wednesday,11:00,13:00,120,35,40,0.99
+C0385,CS581,"Computer Networks",Computer Science,T041,"Meera Sharma",R005,"Room 005",Block A,Wednesday,11:00,12:00,60,100,120,0.99
+C0273,CS441,"Computer Networks",Computer Science,T009,"Ananya Sharma",R010,"Room 010",Block A,Wednesday,11:00,12:00,60,90,100,0.99
+C0144,BU278,"Operations Management",Business,T032,"Diya Singh",R009,"Room 009",Block A,Wednesday,11:00,12:00,60,55,60,0.99
+C0104,BU228,"Principles of Management",Business,T048,"Meera Singh",R014,"Room 014",Block B,Wednesday,11:00,12:00,60,45,50,0.99
+C0060,MA174,"Numerical Methods",Mathematics,T060,"Sana Rao",R011,"Room 011",Block B,Wednesday,11:00,12:00,60,40,40,0.99
+C0066,IT182,"Mobile Application Development",Information Technology,T018,"Ishaan Patel",R002,"Room 002",Block A,Wednesday,12:00,14:00,120,100,100,0.99
+C0090,IT212,"Mobile Application Development",Information Technology,T002,"Aarav Patel",R004,"Room 004",Block A,Wednesday,12:00,14:00,120,60,70,0.99
+C0068,MA184,"Discrete Mathematics",Mathematics,T044,"Meera Rao",R005,"Room 005",Block A,Wednesday,12:00,13:00,60,100,120,0.99
+C0274,IT442,"Mobile Application Development",Information Technology,T034,"Kabir Patel",R010,"Room 010",Block A,Wednesday,12:00,13:00,60,90,100,0.99
+C0085,PH205,"Electromagnetics",Physics,T045,"Meera Nair",R007,"Room 007",Block A,Wednesday,12:00,13:00,60,80,80,0.99
+C0212,MA364,"Engineering Mathematics",Mathematics,T052,"Rohan Rao",R001,"Room 001",Block A,Wednesday,12:00,13:00,60,60,60,0.99
+C0255,CE417,"Structural Analysis",Civil,T047,"Meera Khan",R009,"Room 009",Block A,Wednesday,12:00,13:00,60,60,60,0.99
+C0121,CS251,"Data Structures",Computer Science,T009,"Ananya Sharma",R014,"Room 014",Block B,Wednesday,12:00,13:00,60,45,50,0.99
+C0400,BU598,"Operations Management",Business,T024,"Ishaan Singh",R011,"Room 011",Block B,Wednesday,12:00,13:00,60,40,40,0.99
+C0135,CE267,"Concrete Technology",Civil,T015,"Ananya Khan",R008,"Room 008",Block A,Wednesday,12:00,13:00,60,30,30,0.99
+C0009,CS111,"Software Engineering",Computer Science,T049,"Rohan Sharma",R033,"Room 033",Block D,Wednesday,13:00,14:00,60,30,60,0.47
+C0311,CE487,"Structural Analysis",Civil,T055,"Rohan Khan",R001,"Room 001",Block A,Wednesday,13:00,15:00,120,60,60,0.99
+C0396,MA594,"Discrete Mathematics",Mathematics,T020,"Ishaan Rao",R003,"Room 003",Block A,Wednesday,13:00,15:00,120,35,40,0.99
+C0241,CS401,"Web Development",Computer Science,T057,"Sana Sharma",R006,"Room 006",Block A,Wednesday,13:00,15:00,120,35,50,0.99
+C0398,ME596,"Manufacturing Processes",Mechanical,T022,"Ishaan Iyer",R008,"Room 008",Block A,Wednesday,13:00,15:00,120,25,30,0.99
+C0341,PH525,"Electromagnetics",Physics,T053,"Rohan Nair",R005,"Room 005",Block A,Wednesday,13:00,14:00,60,100,120,0.99
+C0032,BU138,"Principles of Management",Business,T048,"Meera Singh",R010,"Room 010",Block A,Wednesday,13:00,14:00,60,90,100,0.99
+C0048,BU158,"Business Analytics",Business,T008,"Aarav Singh",R007,"Room 007",Block A,Wednesday,13:00,14:00,60,80,80,0.99
+C0297,CS471,"Web Development",Computer Science,T041,"Meera Sharma",R009,"Room 009",Block A,Wednesday,13:00,14:00,60,60,60,0.99
+C0106,IT232,"Python Programming",Information Technology,T034,"Kabir Patel",R014,"Room 014",Block B,Wednesday,13:00,14:00,60,45,50,0.99
+C0307,EC483,"Digital Electronics",Electronics,T043,"Meera Das",R011,"Room 011",Block B,Wednesday,13:00,14:00,60,35,40,0.99
+C0329,CS511,"Software Engineering",Computer Science,T001,"Aarav Sharma",R002,"Room 002",Block A,Wednesday,14:00,16:00,120,90,100,0.99
+C0098,IT222,"Cloud Computing",Information Technology,T050,"Rohan Patel",R005,"Room 005",Block A,Wednesday,14:00,15:00,60,100,120,0.99
+C0045,PH155,"Modern Physics",Physics,T029,"Diya Nair",R010,"Room 010",Block A,Wednesday,14:00,15:00,60,90,100,0.99
+C0118,ME246,"Manufacturing Processes",Mechanical,T030,"Diya Iyer",R007,"Room 007",Block A,Wednesday,14:00,15:00,60,80,80,0.99
+C0395,EC593,"Digital Electronics",Electronics,T043,"Meera Das",R004,"Room 004",Block A,Wednesday,14:00,15:00,60,70,70,0.99
+C0281,CS451,"Data Structures",Computer Science,T017,"Ishaan Sharma",R009,"Room 009",Block A,Wednesday,14:00,15:00,60,60,60,0.99
+C0190,ME336,"Thermodynamics",Mechanical,T006,"Aarav Iyer",R014,"Room 014",Block B,Wednesday,14:00,15:00,60,45,50,0.99
+C0137,CS271,"Data Structures",Computer Science,T025,"Diya Sharma",R011,"Room 011",Block B,Wednesday,14:00,15:00,60,35,40,0.99
+C0289,CS461,"Web Development",Computer Science,T049,"Rohan Sharma",R005,"Room 005",Block A,Wednesday,15:00,16:00,60,100,120,0.99
+C0253,PH415,"Applied Optics",Physics,T013,"Ananya Nair",R010,"Room 010",Block A,Wednesday,15:00,16:00,60,90,100,0.99
+C0038,ME146,"Engineering Mechanics",Mechanical,T030,"Diya Iyer",R007,"Room 007",Block A,Wednesday,15:00,16:00,60,80,80,0.99
+C0187,EC333,"Embedded Systems",Electronics,T011,"Ananya Das",R004,"Room 004",Block A,Wednesday,15:00,16:00,60,70,70,0.99
+C0101,PH225,"Applied Optics",Physics,T021,"Ishaan Nair",R001,"Room 001",Block A,Wednesday,15:00,16:00,60,60,60,0.99
+C0146,IT282,"Python Programming",Information Technology,T050,"Rohan Patel",R009,"Room 009",Block A,Wednesday,15:00,16:00,60,55,60,0.99
+C0017,CS121,"Software Engineering",Computer Science,T033,"Kabir Sharma",R006,"Room 006",Block A,Wednesday,15:00,16:00,60,50,50,0.99
+C0350,ME536,"Thermodynamics",Mechanical,T022,"Ishaan Iyer",R014,"Room 014",Block B,Wednesday,15:00,16:00,60,45,50,0.99
+C0154,IT292,"Information Security",Information Technology,T002,"Aarav Patel",R003,"Room 003",Block A,Wednesday,15:00,16:00,60,40,40,0.99
+C0194,IT342,"Information Security",Information Technology,T034,"Kabir Patel",R011,"Room 011",Block B,Wednesday,15:00,16:00,60,35,40,0.99
+C0196,MA344,"Numerical Methods",Mathematics,T020,"Ishaan Rao",R008,"Room 008",Block A,Wednesday,15:00,16:00,60,30,30,0.99
+C0024,BU128,"Operations Management",Business,T016,"Ananya Singh",R001,"Room 001",Block A,Thursday,08:00,10:00,120,55,60,0.99
+C0242,IT402,"Information Security",Information Technology,T058,"Sana Patel",R004,"Room 004",Block A,Thursday,08:00,10:00,120,50,70,0.99
+C0130,IT262,"Web Technologies",Information Technology,T042,"Meera Patel",R003,"Room 003",Block A,Thursday,08:00,10:00,120,35,40,0.99
+C0097,CS221,"Database Systems",Computer Science,T001,"Aarav Sharma",R006,"Room 006",Block A,Thursday,08:00,10:00,120,35,50,0.99
+C0280,BU448,"Financial Accounting",Business,T056,"Rohan Singh",R002,"Room 002",Block A,Thursday,08:00,09:00,60,100,100,0.99
+C0127,CE257,"Surveying",Civil,T055,"Rohan Khan",R010,"Room 010",Block A,Thursday,08:00,09:00,60,90,100,0.99
+C0270,ME436,"Engineering Mechanics",Mechanical,T038,"Kabir Iyer",R007,"Room 007",Block A,Thursday,08:00,09:00,60,80,80,0.99
+C0182,ME326,"Fluid Mechanics",Mechanical,T022,"Ishaan Iyer",R009,"Room 009",Block A,Thursday,08:00,09:00,60,55,60,0.99
+C0027,EC133,"Microprocessors",Electronics,T059,"Sana Das",R011,"Room 011",Block B,Thursday,08:00,09:00,60,40,40,0.99
+C0089,CS211,"Software Engineering",Computer Science,T017,"Ishaan Sharma",R014,"Room 014",Block B,Thursday,08:00,09:00,60,35,50,0.99
+C0192,BU338,"Operations Management",Business,T040,"Kabir Singh",R008,"Room 008",Block A,Thursday,08:00,09:00,60,30,30,0.99
+C0335,CE517,"Geotechnical Engineering",Civil,T023,"Ishaan Khan",R016,"Room 016",Block B,Thursday,08:00,09:00,60,25,30,0.99
+C0007,CE107,"Structural Analysis",Civil,T023,"Ishaan Khan",R035,"Room 035",Block D,Thursday,09:00,11:00,120,35,40,0.99
+C0351,CE537,"Structural Analysis",Civil,T047,"Meera Khan",R008,"Room 008",Block A,Thursday,09:00,11:00,120,25,30,0.99
+C0354,IT542,"Web Technologies",Information Technology,T050,"Rohan Patel",R002,"Room 002",Block A,Thursday,09:00,10:00,60,100,100,0.99
+C0369,CS561,"Web Development",Computer Science,T041,"Meera Sharma",R010,"Room 010",Block A,Thursday,09:00,10:00,60,90,100,0.99
+C0287,CE457,"Structural Analysis",Civil,T039,"Kabir Khan",R007,"Room 007",Block A,Thursday,09:00,10:00,60,80,80,0.99
+C0076,MA194,"Probability and Statistics",Mathematics,T036,"Kabir Rao",R009,"Room 009",Block A,Thursday,09:00,10:00,60,55,60,0.99
+C0023,CE127,"Structural Analysis",Civil,T015,"Ananya Khan",R011,"Room 011",Block B,Thursday,09:00,10:00,60,40,40,0.99
+C0177,CS321,"Operating Systems",Computer Science,T049,"Rohan Sharma",R014,"Room 014",Block B,Thursday,09:00,10:00,60,30,50,0.99
+C0384,BU578,"Financial Accounting",Business,T024,"Ishaan Singh",R003,"Room 003",Block A,Thursday,10:00,12:00,120,30,40,0.99
+C0357,PH545,"Electromagnetics",Physics,T005,"Aarav Nair",R006,"Room 006",Block A,Thursday,10:00,12:00,120,30,50,0.99
+C0084,MA204,"Engineering Mathematics",Mathematics,T036,"Kabir Rao",R002,"Room 002",Block A,Thursday,10:00,11:00,60,100,100,0.99
+C0082,IT202,"Data Analytics",Information Technology,T034,"Kabir Patel",R010,"Room 010",Block A,Thursday,10:00,11:00,60,90,100,0.99
+C0367,CE557,"Surveying",Civil,T055,"Rohan Khan",R007,"Room 007",Block A,Thursday,10:00,11:00,60,80,80,0.99
+C0113,CS241,"Computer Networks",Computer Science,T049,"Rohan Sharma",R004,"Room 004",Block A,Thursday,10:00,11:00,60,70,70,0.99
+C0124,MA254,"Linear Algebra",Mathematics,T060,"Sana Rao",R001,"Room 001",Block A,Thursday,10:00,11:00,60,60,60,0.99
+C0034,IT142,"Information Security",Information Technology,T058,"Sana Patel",R009,"Room 009",Block A,Thursday,10:00,11:00,60,55,60,0.99
+C0352,BU538,"Operations Management",Business,T032,"Diya Singh",R011,"Room 011",Block B,Thursday,10:00,11:00,60,35,40,0.99
+C0267,EC433,"Signals and Systems",Electronics,T011,"Ananya Das",R001,"Room 001",Block A,Thursday,11:00,13:00,120,55,60,0.99
+C0231,CE387,"Surveying",Civil,T023,"Ishaan Khan",R002,"Room 002",Block A,Thursday,11:00,12:00,60,100,100,0.99
+C0125,PH255,"Modern Physics",Physics,T045,"Meera Nair",R010,"Room 010",Block A,Thursday,11:00,12:00,60,90,100,0.99
+C0302,ME476,"Thermodynamics",Mechanical,T006,"Aarav Iyer",R007,"Room 007",Block A,Thursday,11:00,12:00,60,80,80,0.99
+C0052,MA164,"Linear Algebra",Mathematics,T060,"Sana Rao",R004,"Room 004",Block A,Thursday,11:00,12:00,60,70,70,0.99
+C0221,PH375,"Electromagnetics",Physics,T053,"Rohan Nair",R009,"Room 009",Block A,Thursday,11:00,12:00,60,50,60,0.99
+C0290,IT462,"Python Programming",Information Technology,T002,"Aarav Patel",R011,"Room 011",Block B,Thursday,11:00,12:00,60,35,40,0.99
+C0071,CE187,"Surveying",Civil,T047,"Meera Khan",R008,"Room 008",Block A,Thursday,11:00,12:00,60,30,30,0.99
+C0091,EC213,"Digital Electronics",Electronics,T003,"Aarav Das",R014,"Room 014",Block B,Thursday,11:00,12:00,60,30,50,0.99
+C0142,ME276,"Engineering Mechanics",Mechanical,T030,"Diya Iyer",R002,"Room 002",Block A,Thursday,12:00,14:00,120,80,100,0.99
+C0337,CS521,"Database Systems",Computer Science,T009,"Ananya Sharma",R003,"Room 003",Block A,Thursday,12:00,14:00,120,35,40,0.99
+C0015,CE117,"Surveying",Civil,T023,"Ishaan Khan",R006,"Room 006",Block A,Thursday,12:00,14:00,120,30,50,0.99
+C0288,BU458,"Business Analytics",Business,T048,"Meera Singh",R010,"Room 010",Block A,Thursday,12:00,13:00,60,90,100,0.99
+C0313,CS491,"Operating Systems",Computer Science,T033,"Kabir Sharma",R007,"Room 007",Block A,Thursday,12:00,13:00,60,80,80,0.99
+C0079,CE197,"Surveying",Civil,T015,"Ananya Khan",R004,"Room 004",Block A,Thursday,12:00,13:00,60,70,70,0.99
+C0108,MA234,"Probability and Statistics",Mathematics,T052,"Rohan Rao",R009,"Room 009",Block A,Thursday,12:00,13:00,60,55,60,0.99
+C0394,IT592,"Cloud Computing",Information Technology,T034,"Kabir Patel",R011,"Room 011",Block B,Thursday,12:00,13:00,60,35,40,0.99
+C0123,EC253,"Signals and Systems",Electronics,T003,"Aarav Das",R014,"Room 014",Block B,Thursday,12:00,13:00,60,35,50,0.99
+C0039,CE147,"Structural Analysis",Civil,T055,"Rohan Khan",R008,"Room 008",Block A,Thursday,12:00,13:00,60,30,30,0.99
+C0383,CE577,"Structural Analysis",Civil,T007,"Aarav Khan",R010,"Room 010",Block A,Thursday,13:00,14:00,60,90,100,0.99
+C0148,MA284,"Numerical Methods",Mathematics,T012,"Ananya Rao",R007,"Room 007",Block A,Thursday,13:00,14:00,60,80,80,0.99
+C0327,CE507,"Surveying",Civil,T039,"Kabir Khan",R004,"Room 004",Block A,Thursday,13:00,14:00,60,70,70,0.99
+C0173,PH315,"Engineering Physics",Physics,T013,"Ananya Nair",R001,"Room 001",Block A,Thursday,13:00,14:00,60,60,60,0.99
+C0244,MA404,"Linear Algebra",Mathematics,T044,"Meera Rao",R009,"Room 009",Block A,Thursday,13:00,14:00,60,55,60,0.99
+C0363,EC553,"Microprocessors",Electronics,T011,"Ananya Das",R011,"Room 011",Block B,Thursday,13:00,14:00,60,35,40,0.99
+C0195,EC343,"Communication Systems",Electronics,T051,"Rohan Das",R008,"Room 008",Block A,Thursday,13:00,14:00,60,30,30,0.99
+C0169,CS311,"Computer Networks",Computer Science,T057,"Sana Sharma",R002,"Room 002",Block A,Thursday,14:00,16:00,120,80,100,0.99
+C0139,EC273,"Digital Electronics",Electronics,T043,"Meera Das",R001,"Room 001",Block A,Thursday,14:00,16:00,120,55,60,0.99
+C0247,CE407,"Geotechnical Engineering",Civil,T007,"Aarav Khan",R003,"Room 003",Block A,Thursday,14:00,16:00,120,30,40,0.99
+C0284,MA454,"Discrete Mathematics",Mathematics,T044,"Meera Rao",R006,"Room 006",Block A,Thursday,14:00,16:00,120,30,50,0.99
+C0095,CE217,"Surveying",Civil,T023,"Ishaan Khan",R010,"Room 010",Block A,Thursday,14:00,15:00,60,90,100,0.99
+C0330,IT512,"Information Security",Information Technology,T042,"Meera Patel",R007,"Room 007",Block A,Thursday,14:00,15:00,60,80,80,0.99
+C0361,CS551,"Artificial Intelligence",Computer Science,T049,"Rohan Sharma",R004,"Room 004",Block A,Thursday,14:00,15:00,60,70,70,0.99
+C0336,BU518,"Financial Accounting",Business,T008,"Aarav Singh",R009,"Room 009",Block A,Thursday,14:00,15:00,60,50,60,0.99
+C0366,ME556,"Engineering Mechanics",Mechanical,T014,"Ananya Iyer",R011,"Room 011",Block B,Thursday,14:00,15:00,60,35,40,0.99
+C0325,PH505,"Engineering Physics",Physics,T029,"Diya Nair",R008,"Room 008",Block A,Thursday,14:00,15:00,60,30,30,0.99
+C0331,EC513,"Digital Electronics",Electronics,T019,"Ishaan Das",R007,"Room 007",Block A,Thursday,15:00,16:00,60,80,80,0.99
+C0252,MA414,"Numerical Methods",Mathematics,T012,"Ananya Rao",R004,"Room 004",Block A,Thursday,15:00,16:00,60,70,70,0.99
+C0103,CE227,"Surveying",Civil,T023,"Ishaan Khan",R009,"Room 009",Block A,Thursday,15:00,16:00,60,55,60,0.99
+C0025,CS131,"Computer Networks",Computer Science,T033,"Kabir Sharma",R011,"Room 011",Block B,Thursday,15:00,16:00,60,35,40,0.99
+C0165,PH305,"Electromagnetics",Physics,T005,"Aarav Nair",R008,"Room 008",Block A,Thursday,15:00,16:00,60,30,30,0.99
+C0131,EC263,"Communication Systems",Electronics,T059,"Sana Das",R002,"Room 002",Block A,Friday,08:00,10:00,120,80,100,0.99
+C0022,ME126,"Engineering Mechanics",Mechanical,T022,"Ishaan Iyer",R004,"Room 004",Block A,Friday,08:00,10:00,120,50,70,0.99
+C0347,EC533,"Digital Electronics",Electronics,T035,"Kabir Das",R006,"Room 006",Block A,Friday,08:00,10:00,120,45,50,0.99
+C0149,PH285,"Modern Physics",Physics,T013,"Ananya Nair",R003,"Room 003",Block A,Friday,08:00,10:00,120,35,40,0.99
+C0181,PH325,"Electromagnetics",Physics,T029,"Diya Nair",R010,"Room 010",Block A,Friday,08:00,09:00,60,90,100,0.99
+C0078,ME196,"Manufacturing Processes",Mechanical,T006,"Aarav Iyer",R007,"Room 007",Block A,Friday,08:00,09:00,60,80,80,0.99
+C0220,MA374,"Engineering Mathematics",Mathematics,T052,"Rohan Rao",R001,"Room 001",Block A,Friday,08:00,09:00,60,60,60,0.99
+C0237,PH395,"Applied Optics",Physics,T037,"Kabir Nair",R009,"Room 009",Block A,Friday,08:00,09:00,60,55,60,0.99
+C0271,CE437,"Concrete Technology",Civil,T039,"Kabir Khan",R014,"Room 014",Block B,Friday,08:00,09:00,60,45,50,0.99
+C0156,MA294,"Discrete Mathematics",Mathematics,T020,"Ishaan Rao",R011,"Room 011",Block B,Friday,08:00,09:00,60,35,40,0.99
+C0080,BU198,"Financial Accounting",Business,T024,"Ishaan Singh",R008,"Room 008",Block A,Friday,08:00,09:00,60,30,30,0.99
+C0030,ME136,"Engineering Mechanics",Mechanical,T038,"Kabir Iyer",R001,"Room 001",Block A,Friday,09:00,11:00,120,55,60,0.99
+C0016,BU118,"Operations Management",Business,T016,"Ananya Singh",R010,"Room 010",Block A,Friday,09:00,10:00,60,90,100,0.99
+C0303,CE477,"Surveying",Civil,T055,"Rohan Khan",R007,"Room 007",Block A,Friday,09:00,10:00,60,80,80,0.99
+C0294,ME466,"Thermodynamics",Mechanical,T054,"Rohan Iyer",R009,"Room 009",Block A,Friday,09:00,10:00,60,55,60,0.99
+C0305,CS481,"Programming Fundamentals",Computer Science,T017,"Ishaan Sharma",R014,"Room 014",Block B,Friday,09:00,10:00,60,45,50,0.99
+C0042,IT152,"Data Analytics",Information Technology,T058,"Sana Patel",R011,"Room 011",Block B,Friday,09:00,10:00,60,35,40,0.99
+C0207,CE357,"Concrete Technology",Civil,T023,"Ishaan Khan",R008,"Room 008",Block A,Friday,09:00,10:00,60,30,30,0.99
+C0285,PH455,"Electromagnetics",Physics,T053,"Rohan Nair",R002,"Room 002",Block A,Friday,10:00,12:00,120,80,100,0.99
+C0358,ME546,"Fluid Mechanics",Mechanical,T054,"Rohan Iyer",R003,"Room 003",Block A,Friday,10:00,12:00,120,35,40,0.99
+C0368,BU558,"Principles of Management",Business,T032,"Diya Singh",R006,"Room 006",Block A,Friday,10:00,12:00,120,35,50,0.99
+C0365,PH555,"Electromagnetics",Physics,T013,"Ananya Nair",R005,"Room 005",Block A,Friday,10:00,11:00,60,100,120,0.99
+C0134,ME266,"Manufacturing Processes",Mechanical,T022,"Ishaan Iyer",R010,"Room 010",Block A,Friday,10:00,11:00,60,90,100,0.99
+C0031,CE137,"Concrete Technology",Civil,T039,"Kabir Khan",R004,"Room 004",Block A,Friday,10:00,11:00,60,70,70,0.99
+C0236,MA394,"Numerical Methods",Mathematics,T060,"Sana Rao",R007,"Room 007",Block A,Friday,10:00,11:00,60,60,80,0.99
+C0059,EC173,"Signals and Systems",Electronics,T035,"Kabir Das",R009,"Room 009",Block A,Friday,10:00,11:00,60,55,60,0.99
+C0160,BU298,"Business Analytics",Business,T040,"Kabir Singh",R014,"Room 014",Block B,Friday,10:00,11:00,60,45,50,0.99
+C0159,CE297,"Geotechnical Engineering",Civil,T055,"Rohan Khan",R011,"Room 011",Block B,Friday,10:00,11:00,60,35,40,0.99
+C0346,IT532,"Data Analytics",Information Technology,T050,"Rohan Patel",R008,"Room 008",Block A,Friday,10:00,11:00,60,30,30,0.99
+C0377,CS571,"Web Development",Computer Science,T001,"Aarav Sharma",R004,"Room 004",Block A,Friday,11:00,12:00,60,70,70,0.99
+C0399,CE597,"Surveying",Civil,T055,"Rohan Khan",R001,"Room 001",Block A,Friday,11:00,12:00,60,60,60,0.99
+C0393,CS591,"Software Engineering",Computer Science,T025,"Diya Sharma",R007,"Room 007",Block A,Friday,11:00,12:00,60,60,80,0.99
+C0283,EC453,"Digital Electronics",Electronics,T035,"Kabir Das",R009,"Room 009",Block A,Friday,11:00,12:00,60,55,60,0.99
+C0171,EC313,"Signals and Systems",Electronics,T059,"Sana Das",R008,"Room 008",Block A,Friday,11:00,12:00,60,30,30,0.99
+C0036,MA144,"Discrete Mathematics",Mathematics,T028,"Diya Rao",R011,"Room 011",Block B,Friday,11:00,12:00,60,30,40,0.99
+C0210,IT362,"Cloud Computing",Information Technology,T018,"Ishaan Patel",R014,"Room 014",Block B,Friday,11:00,12:00,60,30,50,0.99
+C0010,IT112,"Python Programming",Information Technology,T034,"Kabir Patel",R039,"Room 039",Block D,Friday,12:00,13:00,60,50,80,0.82
+C0219,EC373,"Signals and Systems",Electronics,T059,"Sana Das",R002,"Room 002",Block A,Friday,12:00,14:00,120,80,100,0.99
+C0140,MA274,"Discrete Mathematics",Mathematics,T004,"Aarav Rao",R001,"Room 001",Block A,Friday,12:00,14:00,120,60,60,0.99
+C0249,CS411,"Database Systems",Computer Science,T033,"Kabir Sharma",R003,"Room 003",Block A,Friday,12:00,14:00,120,30,40,0.99
+C0260,MA424,"Linear Algebra",Mathematics,T028,"Diya Rao",R006,"Room 006",Block A,Friday,12:00,14:00,120,30,50,0.99
+C0035,EC143,"Digital Electronics",Electronics,T019,"Ishaan Das",R005,"Room 005",Block A,Friday,12:00,13:00,60,100,120,0.99
+C0389,PH585,"Modern Physics",Physics,T053,"Rohan Nair",R010,"Room 010",Block A,Friday,12:00,13:00,60,90,100,0.99
+C0261,PH425,"Modern Physics",Physics,T013,"Ananya Nair",R007,"Room 007",Block A,Friday,12:00,13:00,60,80,80,0.99
+C0176,BU318,"Financial Accounting",Business,T040,"Kabir Singh",R004,"Room 004",Block A,Friday,12:00,13:00,60,70,70,0.99
+C0334,ME516,"Thermodynamics",Mechanical,T038,"Kabir Iyer",R009,"Room 009",Block A,Friday,12:00,13:00,60,55,60,0.99
+C0397,PH595,"Applied Optics",Physics,T045,"Meera Nair",R011,"Room 011",Block B,Friday,12:00,13:00,60,35,40,0.99
+C0378,IT572,"Web Technologies",Information Technology,T010,"Ananya Patel",R008,"Room 008",Block A,Friday,12:00,13:00,60,30,30,0.99
+C0390,ME586,"Thermodynamics",Mechanical,T046,"Meera Iyer",R010,"Room 010",Block A,Friday,13:00,14:00,60,90,100,0.99
+C0353,CS541,"Operating Systems",Computer Science,T009,"Ananya Sharma",R004,"Room 004",Block A,Friday,13:00,14:00,60,70,70,0.99
+C0224,BU378,"Principles of Management",Business,T024,"Ishaan Singh",R007,"Room 007",Block A,Friday,13:00,14:00,60,60,80,0.99
+C0072,BU188,"Business Analytics",Business,T040,"Kabir Singh",R009,"Room 009",Block A,Friday,13:00,14:00,60,55,60,0.99
+C0043,EC153,"Embedded Systems",Electronics,T051,"Rohan Das",R011,"Room 011",Block B,Friday,13:00,14:00,60,35,40,0.99
+C0111,CE237,"Concrete Technology",Civil,T039,"Kabir Khan",R008,"Room 008",Block A,Friday,13:00,14:00,60,30,30,0.99
+C0167,CE307,"Geotechnical Engineering",Civil,T047,"Meera Khan",R002,"Room 002",Block A,Friday,14:00,16:00,120,90,100,0.99
+C0322,IT502,"Web Technologies",Information Technology,T010,"Ananya Patel",R001,"Room 001",Block A,Friday,14:00,16:00,120,55,60,0.99
+C0198,ME346,"Thermodynamics",Mechanical,T038,"Kabir Iyer",R003,"Room 003",Block A,Friday,14:00,16:00,120,30,40,0.99
+C0178,IT322,"Web Technologies",Information Technology,T058,"Sana Patel",R004,"Room 004",Block A,Friday,14:00,15:00,60,70,70,0.99
+C0158,ME296,"Thermodynamics",Mechanical,T054,"Rohan Iyer",R007,"Room 007",Block A,Friday,14:00,15:00,60,60,80,0.99
+C0114,IT242,"Information Security",Information Technology,T018,"Ishaan Patel",R009,"Room 009",Block A,Friday,14:00,15:00,60,55,60,0.99
+C0037,PH145,"Applied Optics",Physics,T037,"Kabir Nair",R006,"Room 006",Block A,Friday,14:00,15:00,60,50,50,0.99
+C0230,ME386,"Manufacturing Processes",Mechanical,T046,"Meera Iyer",R008,"Room 008",Block A,Friday,14:00,15:00,60,30,30,0.99
+C0184,BU328,"Business Analytics",Business,T024,"Ishaan Singh",R011,"Room 011",Block B,Friday,14:00,15:00,60,30,40,0.99
+C0310,ME486,"Manufacturing Processes",Mechanical,T046,"Meera Iyer",R004,"Room 004",Block A,Friday,15:00,16:00,60,70,70,0.99
+C0291,EC463,"Microprocessors",Electronics,T011,"Ananya Das",R007,"Room 007",Block A,Friday,15:00,16:00,60,60,80,0.99
+C0064,BU178,"Business Analytics",Business,T032,"Diya Singh",R009,"Room 009",Block A,Friday,15:00,16:00,60,55,60,0.99
+C0239,CE397,"Concrete Technology",Civil,T055,"Rohan Khan",R006,"Room 006",Block A,Friday,15:00,16:00,60,50,50,0.99
+C0046,ME156,"Manufacturing Processes",Mechanical,T014,"Ananya Iyer",R008,"Room 008",Block A,Friday,15:00,16:00,60,30,30,0.99
+C0301,PH475,"Engineering Physics",Physics,T013,"Ananya Nair",R011,"Room 011",Block B,Friday,15:00,16:00,60,25,40,0.99

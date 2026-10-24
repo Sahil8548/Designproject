@@ -1,0 +1,3 @@
+scheduler,classes_scheduled,total_classes,unassigned_classes,room_overlap_pairs,instructor_overlap_pairs,shared_student_overlap_pairs_proxy,preference_cost_sum,runtime_seconds
+baseline,868,896,28,0,0,2502,-5191.5,36.88
+ml,882,896,14,0,0,2625,-5328.5,6.33

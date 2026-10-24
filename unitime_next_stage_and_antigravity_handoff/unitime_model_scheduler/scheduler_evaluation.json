@@ -1,0 +1,117 @@
+{
+  "dataset": "Purdue Fall 2007 LLR UniTime benchmark",
+  "model_evaluation": {
+    "target": "whether this exact class-room-time placement appears in the committed reference solution",
+    "positive_definition": "exact selected room + selected time match from committed solution",
+    "negative_definition": "candidate not selected in this one reference solution; not necessarily a bad placement",
+    "split": "GroupShuffleSplit by class_id: train/validation/test approximately 65/15/20",
+    "n_examples": 220904,
+    "n_positive": 920,
+    "positive_rate": 0.00416470503023938,
+    "n_train": 134575,
+    "n_validation": 35660,
+    "n_test": 50669,
+    "test_classes": 179,
+    "test_precision_at_0_5": 0.015015015015015015,
+    "test_recall_at_0_5": 0.8465608465608465,
+    "test_f1_at_0_5": 0.02950668510834486,
+    "test_roc_auc": 0.8969459852086634,
+    "test_average_precision": 0.039305640059963565,
+    "test_confusion_matrix_labels_0_1": [
+      [
+        39984,
+        10496
+      ],
+      [
+        29,
+        160
+      ]
+    ],
+    "critical_limitations": [
+      "This is a reference-placement ranking model, not a true conflict-risk model.",
+      "Unselected placements are not necessarily poor; there may be many equally valid schedules.",
+      "One benchmark solution does not establish cross-university generalization.",
+      "Reference-derived student-overlap features are excluded to prevent leakage.",
+      "The trained model ranks placements only; hard constraints are handled by scheduler code."
+    ]
+  },
+  "scheduler_results": [
+    {
+      "mode": "baseline",
+      "scheduled_classes": 868,
+      "total_classes": 896,
+      "unassigned_classes": 28,
+      "unassigned_class_ids": [
+        38,
+        501,
+        111,
+        112,
+        105,
+        102,
+        103,
+        104,
+        747,
+        891,
+        749,
+        894,
+        741,
+        742,
+        313,
+        612,
+        468,
+        717,
+        718,
+        719,
+        720,
+        723,
+        72,
+        73,
+        375,
+        188,
+        189,
+        61
+      ],
+      "room_overlap_pairs": 0,
+      "instructor_overlap_pairs": 0,
+      "shared_student_overlap_pairs_proxy": 2502,
+      "soft_preference_cost": -5191.5,
+      "runtime_seconds": 36.88,
+      "notes": "Hard constraints enforced by greedy placement are room and instructor overlaps only. Student overlap is a proxy soft penalty; group constraints/date exceptions are not enforced. Not a complete UniTime solver."
+    },
+    {
+      "mode": "ml",
+      "scheduled_classes": 882,
+      "total_classes": 896,
+      "unassigned_classes": 14,
+      "unassigned_class_ids": [
+        38,
+        501,
+        111,
+        112,
+        105,
+        102,
+        103,
+        104,
+        747,
+        891,
+        749,
+        894,
+        741,
+        742
+      ],
+      "room_overlap_pairs": 0,
+      "instructor_overlap_pairs": 0,
+      "shared_student_overlap_pairs_proxy": 2625,
+      "soft_preference_cost": -5328.5,
+      "runtime_seconds": 6.33,
+      "notes": "Hard constraints enforced by greedy placement are room and instructor overlaps only. Student overlap is a proxy soft penalty; group constraints/date exceptions are not enforced. Not a complete UniTime solver."
+    }
+  ],
+  "interpretation": [
+    "This is a greedy prototype, not an optimal solver.",
+    "Baseline and ML-guided scheduling use the same room/instructor hard checks.",
+    "ML model target is selected-in-reference placement; unselected does not mean invalid.",
+    "No claim of full UniTime constraint satisfaction should be made.",
+    "The independent validation in this prototype covers room/instructor overlap only plus a student-overlap proxy."
+  ]
+}

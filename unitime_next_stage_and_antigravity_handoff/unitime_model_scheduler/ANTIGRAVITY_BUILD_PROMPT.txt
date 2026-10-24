@@ -1,0 +1,59 @@
+ANTIGRAVITY IMPLEMENTATION PROMPT — INTELLIGENT TIMETABLE MANAGEMENT SYSTEM
+
+We have already completed the initial data pipeline and have a Python prototype. Build the actual application around it; do not fabricate data or replace the real UniTime benchmark.
+
+PROJECT GOAL
+Build a usable web application for generating and inspecting university timetables using the real Purdue Fall 2007 Large Lecture Room UniTime dataset. This is a benchmark demonstration, not a production-ready scheduler for an arbitrary university.
+
+CURRENT INPUTS
+- Cleaned CSV tables in unitime_cleaned/
+- Candidate feature table in unitime_validation_stage/candidate_placement_features.csv
+- Existing model/scheduler scripts and outputs in unitime_model_scheduler/
+- Start by inspecting the actual repository and existing scripts before changing anything.
+
+REQUIRED APPLICATION
+1. Data overview page:
+   - Show counts for rooms, classes, room options, time options, students, instructors, and group constraints.
+   - Display data-quality checks and clearly flag unsupported semantics.
+2. Timetable generation page:
+   - Let user choose baseline or ML-guided method.
+   - Let user set a random seed.
+   - Run the Python scheduling pipeline from the backend; do not hard-code the displayed results.
+   - Show progress/status and clear errors.
+3. Timetable viewer:
+   - Filter by class, department, day mask, room, and unassigned status.
+   - Show class ID, room, days, start time, duration, preferences, and model score where relevant.
+   - Show unassigned classes separately.
+   - Provide CSV export.
+4. Validation page:
+   - Display independently recomputed room and instructor overlap counts.
+   - Display shared-student overlap proxy and warnings.
+   - Show which constraints are implemented and which are not.
+   - Never display “fully valid” unless all required hard constraints have actually been implemented and checked.
+5. Comparison page:
+   - Compare baseline and ML-guided schedules on scheduled class count, unassigned count, room/instructor overlaps, student-conflict proxy, preference cost, and runtime.
+6. Explainability/methodology page:
+   - Explain real data, preprocessing, features, grouped train/validation/test split, model target, and metrics.
+   - Explain that model target is “selected in one reference solution”, not “good/bad timetable”.
+   - Do not claim the ML model proves better schedule quality.
+7. Keep code modular: data loading, scheduling, validation, and UI should be separate modules.
+8. Use Streamlit unless the existing repo already has a clear framework choice.
+9. Add dependency file, setup/run instructions, and tests for overlap detection and output validation.
+10. Keep the UI simple and professional. Use real output data only.
+
+CRITICAL CONSTRAINTS
+- Do not invent rows, metrics, classes, rooms, or validation results.
+- Do not hide unassigned classes.
+- Do not claim full UniTime compatibility.
+- The current scheduler enforces room and instructor overlap checks only; group constraints, date exceptions, all room-sharing rules, and complete student conflict semantics are not fully implemented.
+- The current reference-placement model has limitations; preserve these in the UI.
+- If a requested feature is not implemented, show it as pending instead of faking it.
+
+ACCEPTANCE TESTS
+- App starts from documented command.
+- Data overview counts match input CSVs.
+- Generate button runs the selected backend method.
+- Exported CSV equals the generated schedule shown in the UI.
+- Validator reports zero room/instructor overlap pairs for the current saved schedules and catches an intentionally injected overlap in tests.
+- Unassigned classes are listed and counted.
+- No unsupported constraint is labelled as enforced.

@@ -1,0 +1,13 @@
+check,value,unit,interpretation
+source_classes,896,count,Classes in original benchmark XML
+solution_classes_with_selected_time,896,count,Classes with a selected time extracted from committed solution
+classes_missing_room_or_single_time,1,count,"Expected zero; tuples include class id, room count, time count"
+selected_room_option_mismatches,0,count,Selected rooms should be candidate options for the class
+selected_time_option_mismatches,0,count,Selected times should be candidate options for the class
+room_overlap_pairs,56,pairs,Weekly time overlap and shared physical room; date exceptions not yet applied
+instructor_overlap_pairs,18,pairs,Weekly time overlap and shared instructor; date exceptions not yet applied
+student_overlap_pairs,2764,pairs,Weekly time overlap and at least one shared student inferred via offering enrollment; not all UniTime student-conflict semantics
+room_capacity_issues,45,assignments,Selected room capacity below classLimit; special exceptions not interpreted
+unknown_selected_rooms,0,assignments,Selected room not found in room table
+classes_with_no_selected_room,1,classes,Classes with no room selected
+time_slot_domain,288,slots/day,From root XML slotsPerDay; one slot is 5 minutes in this benchmark format

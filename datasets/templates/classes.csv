@@ -1,0 +1,5 @@
+class_id,course_code,course_name,department,student_count,duration_minutes,teacher_id
+C001,CS101,Python Programming,IT,60,60,T001
+C002,CS102,Data Structures,IT,45,60,T002
+C003,MA101,Engineering Mathematics,CSE,80,60,T003
+C004,CS103,Database Systems,IT,50,120,T001

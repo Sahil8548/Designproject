@@ -1,0 +1,37 @@
+class_id,course_code,course_name,department,teacher_id,teacher_name,room_id,room_name,building,day,start_time,end_time,duration_minutes,student_count,room_capacity,ai_score
+C011,MA101,"Calculus and Linear Algebra",Mathematics,T005,"Dr. John von Neumann",R401,"Grand Hall 401",Block D,Monday,09:00,10:00,60,85,120,0.99
+C005,CS202,"Machine Learning Seminar",Computer Science,T002,"Dr. Grace Hopper",R101,"Lecture Hall 101",Block A,Monday,09:00,11:00,120,55,70,0.99
+C015,PH101,"Classical Mechanics",Physics,T007,"Dr. Richard Feynman",R104,"Auditorium 104",Block A,Monday,09:00,10:00,60,80,100,0.99
+C003,CS103,"Operating Systems Lab",Computer Science,T001,"Dr. Alan Turing",R104,"Auditorium 104",Block A,Monday,10:00,12:00,120,40,100,0.99
+C018,PH201,"Quantum Physics Fundamentals",Physics,T008,"Dr. Marie Curie",R102,"Seminar Room 102",Block A,Monday,10:00,11:00,60,45,50,0.99
+C013,MA201,"Probability and Statistics",Mathematics,T005,"Dr. John von Neumann",R101,"Lecture Hall 101",Block A,Monday,11:00,12:00,60,70,70,0.99
+C026,ME201,"Robotics and Automation",Mechanical Engineering,T012,"Dr. James Watt",R101,"Lecture Hall 101",Block A,Monday,12:00,14:00,120,50,70,0.99
+C030,BA202,"Strategic Marketing Studies",Business Administration,T014,"Dr. Philip Kotler",R101,"Lecture Hall 101",Block A,Monday,14:00,16:00,120,48,70,0.99
+C028,BA102,"Financial Accounting",Business Administration,T014,"Dr. Philip Kotler",R101,"Lecture Hall 101",Block A,Monday,16:00,17:00,60,65,70,0.99
+C027,BA101,"Principles of Management",Business Administration,T013,"Dr. Peter Drucker",R401,"Grand Hall 401",Block D,Tuesday,09:00,10:00,60,90,120,0.99
+C019,EE101,"Circuit Theory & Analysis",Electrical Engineering,T009,"Dr. Nikola Tesla",R101,"Lecture Hall 101",Block A,Tuesday,09:00,10:00,60,70,70,0.99
+C035,EE301,"Embedded Systems Architecture",Electrical Engineering,T009,"Dr. Nikola Tesla",R101,"Lecture Hall 101",Block A,Tuesday,10:00,12:00,120,45,70,0.99
+C017,PH103,"Experimental Physics Lab",Physics,T007,"Dr. Richard Feynman",R102,"Seminar Room 102",Block A,Tuesday,11:00,13:00,120,38,50,0.99
+C020,EE102,"Digital Electronics Lab",Electrical Engineering,T010,"Dr. Michael Faraday",R101,"Lecture Hall 101",Block A,Tuesday,12:00,14:00,120,40,70,0.99
+C004,CS201,"Artificial Intelligence",Computer Science,T015,"Dr. Donald Knuth",R104,"Auditorium 104",Block A,Tuesday,13:00,14:00,60,75,100,0.99
+C014,MA202,"Numerical Analysis Workshop",Mathematics,T006,"Dr. Katherine Johnson",R101,"Lecture Hall 101",Block A,Tuesday,14:00,16:00,120,35,70,0.99
+C024,ME102,"Fluid Dynamics",Mechanical Engineering,T012,"Dr. James Watt",R101,"Lecture Hall 101",Block A,Tuesday,16:00,17:00,60,62,70,0.99
+C023,ME101,"Engineering Thermodynamics",Mechanical Engineering,T011,"Dr. Henry Ford",R104,"Auditorium 104",Block A,Wednesday,09:00,10:00,60,75,100,0.99
+C033,MA301,"Applied Linear Systems",Mathematics,T005,"Dr. John von Neumann",R101,"Lecture Hall 101",Block A,Wednesday,09:00,10:00,60,60,70,0.99
+C016,PH102,"Electromagnetism & Waves",Physics,T008,"Dr. Marie Curie",R101,"Lecture Hall 101",Block A,Wednesday,10:00,11:00,60,65,70,0.99
+C001,CS101,"Intro to Python Programming",Computer Science,T001,"Dr. Alan Turing",R101,"Lecture Hall 101",Block A,Wednesday,11:00,12:00,60,60,70,0.99
+C008,IT103,"Web Engineering Studio",Information Technology,T016,"Dr. Barbara Liskov",R101,"Lecture Hall 101",Block A,Wednesday,12:00,14:00,120,45,70,0.99
+C036,ME301,"Finite Element Analysis",Mechanical Engineering,T011,"Dr. Henry Ford",R101,"Lecture Hall 101",Block A,Wednesday,14:00,16:00,120,40,70,0.99
+C006,IT101,"Information Systems Design",Information Technology,T003,"Dr. Claude Shannon",R101,"Lecture Hall 101",Block A,Wednesday,16:00,17:00,60,50,70,0.99
+C007,IT102,"Database Architecture",Information Technology,T004,"Dr. Ada Lovelace",R101,"Lecture Hall 101",Block A,Thursday,09:00,10:00,60,65,70,0.99
+C025,ME103,"CAD Modeling Workshop",Mechanical Engineering,T011,"Dr. Henry Ford",R101,"Lecture Hall 101",Block A,Thursday,10:00,12:00,120,42,70,0.99
+C012,MA102,"Discrete Mathematics",Mathematics,T006,"Dr. Katherine Johnson",R101,"Lecture Hall 101",Block A,Thursday,12:00,13:00,60,60,70,0.99
+C002,CS102,"Data Structures and Algorithms",Computer Science,T002,"Dr. Grace Hopper",R101,"Lecture Hall 101",Block A,Thursday,13:00,14:00,60,48,70,0.99
+C022,EE202,"Power Grid Engineering",Electrical Engineering,T010,"Dr. Michael Faraday",R101,"Lecture Hall 101",Block A,Thursday,14:00,15:00,60,48,70,0.99
+C032,IT301,"Network Protocol Engineering",Information Technology,T016,"Dr. Barbara Liskov",R101,"Lecture Hall 101",Block A,Thursday,15:00,16:00,60,45,70,0.99
+C010,IT202,"Cybersecurity Principles",Information Technology,T004,"Dr. Ada Lovelace",R101,"Lecture Hall 101",Block A,Thursday,16:00,17:00,60,42,70,0.99
+C009,IT201,"Cloud Computing Infrastructure",Information Technology,T003,"Dr. Claude Shannon",R101,"Lecture Hall 101",Block A,Friday,09:00,10:00,60,58,70,0.99
+C029,BA201,"Organizational Behavior",Business Administration,T013,"Dr. Peter Drucker",R101,"Lecture Hall 101",Block A,Friday,10:00,11:00,60,55,70,0.99
+C021,EE201,"Signals and Systems",Electrical Engineering,T009,"Dr. Nikola Tesla",R101,"Lecture Hall 101",Block A,Friday,11:00,12:00,60,52,70,0.99
+C031,CS301,"Cloud Native Microservices",Computer Science,T015,"Dr. Donald Knuth",R101,"Lecture Hall 101",Block A,Friday,12:00,13:00,60,50,70,0.99
+C034,PH301,"Solid State Physics",Physics,T007,"Dr. Richard Feynman",R101,"Lecture Hall 101",Block A,Friday,13:00,14:00,60,40,70,0.99

@@ -1,0 +1,7 @@
+teacher_id,slot_id,available
+T001,MON_0900,true
+T001,MON_1000,true
+T001,MON_1100,false
+T002,MON_0900,false
+T002,MON_1000,true
+T003,TUE_0900,true

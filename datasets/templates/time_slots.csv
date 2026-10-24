@@ -1,0 +1,8 @@
+slot_id,day,start_time,end_time
+MON_0900,Monday,09:00,10:00
+MON_1000,Monday,10:00,11:00
+MON_1100,Monday,11:00,12:00
+TUE_0900,Tuesday,09:00,10:00
+TUE_1000,Tuesday,10:00,11:00
+WED_0900,Wednesday,09:00,10:00
+TUE_1300,Tuesday,13:00,14:00

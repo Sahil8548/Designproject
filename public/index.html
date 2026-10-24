@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UniTime — AI-Powered University Timetable Generator</title>
+  <meta name="description" content="Step-by-step academic timetable scheduling with mandatory stage-by-stage user approval.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Navigation Bar (3 Primary Sections Only) -->
+  <header class="app-header">
+    <div class="header-inner">
+      <div class="brand">
+        <svg class="brand-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/>
+          <path d="M6 6h10"/>
+          <path d="M6 10h10"/>
+          <path d="M6 14h6"/>
+        </svg>
+        <div class="brand-text">
+          <span class="brand-name">UniTime</span>
+          <span class="brand-tag">Approval-Gated Timetable Generator</span>
+        </div>
+      </div>
+
+      <!-- Exactly 3 Primary Navigation Sections -->
+      <nav class="nav-bar" aria-label="Main Navigation">
+        <button class="nav-link active" data-tab="generate" id="navTabGenerate">Generate</button>
+        <button class="nav-link" data-tab="timetable" id="navTabTimetable">Timetable</button>
+        <button class="nav-link" data-tab="results" id="navTabResults">Results</button>
+      </nav>
+
+      <!-- Compact Workflow State Badge -->
+      <div class="header-meta">
+        <span class="status-dot" id="headerStatusDot" title="Operational"></span>
+        <span class="meta-label" id="headerStageLabel">Stage 1: CSV Input</span>
+        <span class="meta-sep">·</span>
+        <span class="meta-detail" id="headerStageStatus">Awaiting Confirmation</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Viewport Content -->
+  <main class="app-content" id="mainContent">
+
+    <!-- ====================================================================
+         SECTION 1: GENERATE WORKFLOW (MANDATORY APPROVAL AT EVERY STAGE)
+         Stages: CSV Input → Preprocessing → AI Scoring → Scheduling → Validation → Final Timetable
+         ==================================================================== -->
+    <section class="module-view active" id="viewGenerate">
+
+      <!-- Horizontal 6-Stage Progress Stepper -->
+      <div class="pipeline-stepper" id="workflowStepper">
+        <div class="step-node active" id="stepNode1" data-step="1">
+          <span class="step-num" id="stepIcon1">1</span>
+          <span class="step-text">1. CSV Input</span>
+          <span class="step-badge badge-warning" id="stepBadge1">Awaiting Approval</span>
+        </div>
+        <div class="step-arrow">→</div>
+
+        <div class="step-node locked" id="stepNode2" data-step="2">
+          <span class="step-num" id="stepIcon2">🔒</span>
+          <span class="step-text">2. Preprocessing</span>
+          <span class="step-badge badge-neutral" id="stepBadge2">Locked</span>
+        </div>
+        <div class="step-arrow">→</div>
+
+        <div class="step-node locked" id="stepNode3" data-step="3">
+          <span class="step-num" id="stepIcon3">🔒</span>
+          <span class="step-text">3. AI/ML Scoring</span>
+          <span class="step-badge badge-neutral" id="stepBadge3">Locked</span>
+        </div>
+        <div class="step-arrow">→</div>
+
+        <div class="step-node locked" id="stepNode4" data-step="4">
+          <span class="step-num" id="stepIcon4">🔒</span>
+          <span class="step-text">4. Scheduling</span>
+          <span class="step-badge badge-neutral" id="stepBadge4">Locked</span>
+        </div>
+        <div class="step-arrow">→</div>
+
+        <div class="step-node locked" id="stepNode5" data-step="5">
+          <span class="step-num" id="stepIcon5">🔒</span>
+          <span class="step-text">5. Validation</span>
+          <span class="step-badge badge-neutral" id="stepBadge5">Locked</span>
+        </div>
+        <div class="step-arrow">→</div>
+
+        <div class="step-node locked" id="stepNode6" data-step="6">
+          <span class="step-num" id="stepIcon6">🔒</span>
+          <span class="step-text">6. Final Timetable</span>
+          <span class="step-badge badge-neutral" id="stepBadge6">Locked</span>
+        </div>
+      </div>
+
+      <!-- Workflow Control Toolbar -->
+      <div class="workflow-control-bar mb-4">
+        <div class="wf-info">
+          <strong id="wfActiveStageText">Active Stage: Stage 1 — CSV Input</strong>
+          <span class="text-muted text-xs ml-2" id="wfStageNotice">Review input files and confirm to advance to Preprocessing.</span>
+        </div>
+        <button class="btn btn-sm btn-outline text-error" id="btnResetWorkflow">
+          Reset Workflow
+        </button>
+      </div>
+
+      <!-- ================================================================
+           STAGE 1: CSV INPUT PANEL
+           ================================================================ -->
+      <div class="stage-card active mb-4" id="stageCard1">
+        <div class="panel-header">
+          <div>
+            <span class="stage-tag">Stage 1</span>
+            <h2 class="panel-title">CSV Input Verification</h2>
+          </div>
+          <button class="btn btn-sm btn-secondary" id="btnLoadSampleDataset">Load Sample Dataset</button>
+        </div>
+        <div class="panel-body">
+          <p class="text-muted mb-3">
+            Review the six input CSV files. The <code>rooms.csv</code> schema contains <code>room_id,room_name,capacity,building</code> (no <code>room_type</code>). The <code>course_requirements.csv</code> schema contains <code>class_id,allowed_days,preferred_time,fixed_room_id,fixed_slot_id</code> (no <code>required_room_type</code>).
+          </p>
+
+          <div class="csv-upload-table-wrap mb-4">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th style="width: 25%;">File Name</th>
+                  <th style="width: 35%;">Required Schema</th>
+                  <th style="width: 20%;">Upload Status</th>
+                  <th style="width: 20%;">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="csvFilesTbody">
+                <!-- 1. classes.csv -->
+                <tr>
+                  <td><strong><code>classes.csv</code></strong><div class="text-muted text-xs">Classes &amp; teachers</div></td>
+                  <td class="font-mono text-xs text-muted">class_id, course_code, course_name, department, student_count, duration_minutes, teacher_id</td>
+                  <td><span class="badge badge-success" id="badge-classes">Loaded (36 rows)</span></td>
+                  <td>
+                    <div class="file-action-buttons">
+                      <label class="btn btn-xs btn-secondary file-upload-label">
+                        Upload <input type="file" accept=".csv" class="hidden-file-input" data-filename="classes.csv">
+                      </label>
+                      <a href="/api/templates/classes.csv" download="classes.csv" class="btn btn-xs btn-outline">Template</a>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- 2. rooms.csv -->
+                <tr>
+                  <td><strong><code>rooms.csv</code></strong><div class="text-muted text-xs">Rooms &amp; capacities</div></td>
+                  <td class="font-mono text-xs text-muted">room_id, room_name, capacity, building</td>
+                  <td><span class="badge badge-success" id="badge-rooms">Loaded (12 rows)</span></td>
+                  <td>
+                    <div class="file-action-buttons">
+                      <label class="btn btn-xs btn-secondary file-upload-label">
+                        Upload <input type="file" accept=".csv" class="hidden-file-input" data-filename="rooms.csv">
+                      </label>
+                      <a href="/api/templates/rooms.csv" download="rooms.csv" class="btn btn-xs btn-outline">Template</a>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- 3. teachers.csv -->
+                <tr>
+                  <td><strong><code>teachers.csv</code></strong><div class="text-muted text-xs">Faculty teachers</div></td>
+                  <td class="font-mono text-xs text-muted">teacher_id, teacher_name, department</td>
+                  <td><span class="badge badge-success" id="badge-teachers">Loaded (16 rows)</span></td>
+                  <td>
+                    <div class="file-action-buttons">
+                      <label class="btn btn-xs btn-secondary file-upload-label">
+                        Upload <input type="file" accept=".csv" class="hidden-file-input" data-filename="teachers.csv">
+                      </label>
+                      <a href="/api/templates/teachers.csv" download="teachers.csv" class="btn btn-xs btn-outline">Template</a>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- 4. time_slots.csv -->
+                <tr>
+                  <td><strong><code>time_slots.csv</code></strong><div class="text-muted text-xs">University time slots</div></td>
+                  <td class="font-mono text-xs text-muted">slot_id, day, start_time, end_time</td>
+                  <td><span class="badge badge-success" id="badge-time_slots">Loaded (40 rows)</span></td>
+                  <td>
+                    <div class="file-action-buttons">
+                      <label class="btn btn-xs btn-secondary file-upload-label">
+                        Upload <input type="file" accept=".csv" class="hidden-file-input" data-filename="time_slots.csv">
+                      </label>
+                      <a href="/api/templates/time_slots.csv" download="time_slots.csv" class="btn btn-xs btn-outline">Template</a>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- 5. teacher_availability.csv -->
+                <tr>
+                  <td><strong><code>teacher_availability.csv</code></strong><div class="text-muted text-xs">Faculty availability matrix</div></td>
+                  <td class="font-mono text-xs text-muted">teacher_id, slot_id, available</td>
+                  <td><span class="badge badge-success" id="badge-teacher_availability">Loaded (640 rows)</span></td>
+                  <td>
+                    <div class="file-action-buttons">
+                      <label class="btn btn-xs btn-secondary file-upload-label">
+                        Upload <input type="file" accept=".csv" class="hidden-file-input" data-filename="teacher_availability.csv">
+                      </label>
+                      <a href="/api/templates/teacher_availability.csv" download="teacher_availability.csv" class="btn btn-xs btn-outline">Template</a>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- 6. course_requirements.csv -->
+                <tr>
+                  <td><strong><code>course_requirements.csv</code></strong><div class="text-muted text-xs">Allowed days &amp; fixed assignments</div></td>
+                  <td class="font-mono text-xs text-muted">class_id, allowed_days, preferred_time, fixed_room_id, fixed_slot_id</td>
+                  <td><span class="badge badge-success" id="badge-course_requirements">Loaded (36 rows)</span></td>
+                  <td>
+                    <div class="file-action-buttons">
+                      <label class="btn btn-xs btn-secondary file-upload-label">
+                        Upload <input type="file" accept=".csv" class="hidden-file-input" data-filename="course_requirements.csv">
+                      </label>
+                      <a href="/api/templates/course_requirements.csv" download="course_requirements.csv" class="btn btn-xs btn-outline">Template</a>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Mandatory Stage 1 Approval Action -->
+          <div class="approval-action-card">
+            <div class="action-info">
+              <strong>Mandatory Approval Gate:</strong>
+              <span class="text-muted text-xs">All 6 files must be verified before preprocessing can be initiated.</span>
+            </div>
+            <button class="btn btn-primary" id="btnApproveStage1">
+              Confirm CSV Files &amp; Continue to Preprocessing
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================================================================
+           STAGE 2: DATA PREPROCESSING PANEL
+           ================================================================ -->
+      <div class="stage-card locked mb-4" id="stageCard2">
+        <div class="panel-header">
+          <div>
+            <span class="stage-tag">Stage 2</span>
+            <h2 class="panel-title">Data Preprocessing &amp; Integrity Verification</h2>
+          </div>
+          <span class="stage-state-indicator" id="stage2StateIndicator">Locked</span>
+        </div>
+        <div class="panel-body">
+          <p class="text-muted mb-3">
+            Validates data types, verifies foreign-key relationships (teachers, rooms, slots), standardises missing values without deleting rows, and checks capacity constraints.
+          </p>
+
+          <!-- Preprocessing Execution Action (When Ready) -->
+          <div class="run-stage-banner mb-3" id="bannerRunStage2">
+            <button class="btn btn-primary" id="btnExecuteStage2">Run Data Preprocessing</button>
+            <span class="text-muted text-xs ml-3">Stage 1 approved. Ready to execute data preprocessing.</span>
+          </div>
+
+          <!-- Preprocessing Summary Display -->
+          <div class="prep-summary-box mb-3 hidden" id="stage2SummaryBox">
+            <div class="prep-stat-row">
+              <div class="prep-stat">
+                <span class="stat-caption">Total Input Rows</span>
+                <span class="stat-figure font-mono" id="s2InputRows">—</span>
+              </div>
+              <div class="prep-stat">
+                <span class="stat-caption">Valid Records</span>
+                <span class="stat-figure font-mono text-success" id="s2ValidRows">—</span>
+              </div>
+              <div class="prep-stat">
+                <span class="stat-caption">Invalid / Errors</span>
+                <span class="stat-figure font-mono" id="s2InvalidRows">—</span>
+              </div>
+              <div class="prep-stat">
+                <span class="stat-caption">Missing Handled</span>
+                <span class="stat-figure font-mono text-accent" id="s2MissingHandled">—</span>
+              </div>
+              <div class="prep-stat">
+                <span class="stat-caption">Classes Preprocessed</span>
+                <span class="stat-figure font-mono" id="s2OutputClasses">—</span>
+              </div>
+            </div>
+            <div class="prep-footnote">
+              <span class="badge badge-success" id="s2StatusBadge">Clean &amp; Verified</span> Original CSV files remain untouched; validated data ready for AI model inference.
+            </div>
+          </div>
+
+          <!-- Detailed Ledger Drawer (Toggled) -->
+          <div class="prep-ledger-details hidden mb-3" id="s2DetailsContainer">
+            <h3 class="text-xs font-bold text-muted uppercase mb-2">Integrity Verification Audit Rules</h3>
+            <ul class="audit-rule-list" id="s2IntegrityList"></ul>
+          </div>
+
+          <!-- Mandatory Stage 2 Approval Options -->
+          <div class="approval-action-card hidden" id="approvalCardStage2">
+            <div class="action-info">
+              <strong>Preprocessing Finished — Awaiting Your Approval:</strong>
+              <span class="text-muted text-xs">Model scoring will not execute until you review and explicitly approve these results.</span>
+            </div>
+            <div class="action-buttons-group">
+              <button class="btn btn-secondary btn-sm" id="btnReviewStage2">Review Preprocessing Results</button>
+              <button class="btn btn-primary" id="btnApproveStage2">Approve &amp; Continue to AI/ML Scoring</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================================================================
+           STAGE 3: AI/ML MODEL SCORING PANEL
+           ================================================================ -->
+      <div class="stage-card locked mb-4" id="stageCard3">
+        <div class="panel-header">
+          <div>
+            <span class="stage-tag">Stage 3</span>
+            <h2 class="panel-title">AI/ML Model Scoring</h2>
+          </div>
+          <span class="stage-state-indicator" id="stage3StateIndicator">Locked</span>
+        </div>
+        <div class="panel-body">
+          <p class="text-muted mb-3">
+            Constructs candidate room-and-time placement options per class and scores each option using tree ensembles, pairwise ranking, or baseline heuristics.
+          </p>
+
+          <!-- Model Configuration Controls -->
+          <div class="strategy-options mb-3" id="stage3ConfigBox">
+            <label class="strategy-option active" id="optRandomForest">
+              <input type="radio" name="stage3Model" value="random_forest" checked>
+              <div class="opt-body">
+                <div class="opt-header">
+                  <span class="opt-title">Random Forest (Tree Ensemble)</span>
+                  <span class="badge badge-success">Recommended</span>
+                </div>
+                <span class="opt-desc">Decision trees split on sharp room-capacity step gates and building affinities, avoiding probability distortion.</span>
+              </div>
+            </label>
+
+            <label class="strategy-option" id="optXgboost">
+              <input type="radio" name="stage3Model" value="xgboost">
+              <div class="opt-body">
+                <div class="opt-header">
+                  <span class="opt-title">XGBoost (LambdaMART)</span>
+                  <span class="badge badge-accent">Pairwise Ranking</span>
+                </div>
+                <span class="opt-desc">Optimizes pairwise candidate ranking loss grouped by class offering to prioritize top choices first.</span>
+              </div>
+            </label>
+
+            <label class="strategy-option" id="optCompareBoth">
+              <input type="radio" name="stage3Model" value="compare_both">
+              <div class="opt-body">
+                <div class="opt-header">
+                  <span class="opt-title">Compare Both Models</span>
+                  <span class="badge badge-warning">Multi-Model</span>
+                </div>
+                <span class="opt-desc">Evaluates both Random Forest and XGBoost scoring distributions side-by-side.</span>
+              </div>
+            </label>
+
+            <label class="strategy-option" id="optBaseline">
+              <input type="radio" name="stage3Model" value="baseline">
+              <div class="opt-body">
+                <div class="opt-header">
+                  <span class="opt-title">Greedy Baseline</span>
+                  <span class="badge badge-neutral">Non-ML</span>
+                </div>
+                <span class="opt-desc">Pure preference cost minimization based on room capacity margin and daylight time preferences.</span>
+              </div>
+            </label>
+          </div>
+
+          <!-- Scoring Execution Action (When Ready) -->
+          <div class="run-stage-banner mb-3" id="bannerRunStage3">
+            <button class="btn btn-primary" id="btnExecuteStage3">Score Candidate Placements</button>
+            <span class="text-muted text-xs ml-3">Preprocessing approved. Ready to score candidate placements.</span>
+          </div>
+
+          <!-- Scoring Results Summary Display -->
+          <div class="prep-summary-box mb-3 hidden" id="stage3SummaryBox">
+            <div class="prep-stat-row">
+              <div class="prep-stat">
+                <span class="stat-caption">Classes Evaluated</span>
+                <span class="stat-figure font-mono" id="s3ClassesCount">—</span>
+              </div>
+              <div class="prep-stat">
+                <span class="stat-caption">Candidate Placements</span>
+                <span class="stat-figure font-mono text-accent" id="s3CandidatesCount">—</span>
+              </div>
+              <div class="prep-stat">
+                <span class="stat-caption">Accuracy Rate</span>
+                <span class="stat-figure font-mono text-success font-bold" id="s3AccuracyRate">—</span>
+              </div>
+              <div class="prep-stat">
+                <span class="stat-caption">Precision Rate</span>
+                <span class="stat-figure font-mono text-accent font-bold" id="s3PrecisionRate">—</span>
+              </div>
+              <div class="prep-stat">
+                <span class="stat-caption">ROC-AUC</span>
+                <span class="stat-figure font-mono text-success" id="s3RocAuc">—</span>
+              </div>
+              <div class="prep-stat">
+                <span class="stat-caption">F1-Score</span>
+                <span class="stat-figure font-mono" id="s3F1Score">—</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Model Results Preview Table (Toggled) -->
+          <div class="prep-ledger-details hidden mb-3" id="s3DetailsContainer">
+            <h3 class="text-xs font-bold text-muted uppercase mb-2">Sample Top-Scored Candidate Placements</h3>
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Class / Offering</th>
+                  <th>Top Room</th>
+                  <th>Day</th>
+                  <th>Time Window</th>
+                  <th>Eligible Options</th>
+                  <th>AI Score</th>
+                </tr>
+              </thead>
+              <tbody id="s3SampleTbody"></tbody>
+            </table>
+          </div>
+
+          <!-- Mandatory Stage 3 Approval Options -->
+          <div class="approval-action-card hidden" id="approvalCardStage3">
+            <div class="action-info">
+              <strong>Model Scoring Finished — Awaiting Your Approval:</strong>
+              <span class="text-muted text-xs">The scheduling algorithm will not start until you review and explicitly approve candidate scores.</span>
+            </div>
+            <div class="action-buttons-group">
+              <button class="btn btn-secondary btn-sm" id="btnReviewStage3">Review Model Results</button>
+              <button class="btn btn-primary" id="btnApproveStage3">Approve &amp; Continue to Scheduling</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================================================================
+           STAGE 4: SCHEDULING ALGORITHM PANEL
+           ================================================================ -->
+      <div class="stage-card locked mb-4" id="stageCard4">
+        <div class="panel-header">
+          <div>
+            <span class="stage-tag">Stage 4</span>
+            <h2 class="panel-title">Scheduling Algorithm &amp; Optimisation</h2>
+          </div>
+          <span class="stage-state-indicator" id="stage4StateIndicator">Locked</span>
+        </div>
+        <div class="panel-body">
+          <p class="text-muted mb-3">
+            Assigns classes to rooms and time intervals using candidate scores. Enforces strict hard constraints: zero room double-bookings, zero teacher overlaps, teacher availability compliance, capacity compliance, and multi-period duration intervals.
+          </p>
+
+          <!-- Scheduling Parameters -->
+          <div class="params-row mb-3" id="stage4ParamsBox">
+            <div class="form-group flex-1">
+              <label class="form-label" for="txtSchedulerSeed">Deterministic Seed</label>
+              <input type="number" id="txtSchedulerSeed" class="form-input font-mono" value="42" min="1" max="999999">
+            </div>
+            <div class="form-group flex-1 pt-4">
+              <label class="checkbox-container">
+                <input type="checkbox" id="chkEnableRepair" checked>
+                <span class="checkbox-label">
+                  <strong>1-Level Ejection Chain Repair</strong>
+                  <span class="checkbox-subtext">Displace blocking classes to relocate contested offerings.</span>
+                </span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Scheduling Execution Action (When Ready) -->
+          <div class="run-stage-banner mb-3" id="bannerRunStage4">
+            <button class="btn btn-primary" id="btnExecuteStage4">Run Scheduling Algorithm</button>
+            <span class="text-muted text-xs ml-3">Model scoring approved. Ready to run scheduling solver.</span>
+          </div>
+
+          <!-- Scheduling Results Summary Display -->
+          <div class="prep-summary-box mb-3 hidden" id="stage4SummaryBox">
+            <div class="prep-stat-row">
+              <div class="prep-stat">
+                <span class="stat-caption">Classes Scheduled</span>
+                <span class="stat-figure font-mono text-success" id="s4ScheduledCount">—</span>
+              </div>
+              <div class="prep-stat">
+                <span class="stat-caption">Accuracy Rate</span>
+                <span class="stat-figure font-mono text-success font-bold" id="s4AccuracyRate">—</span>
+              </div>
+              <div class="prep-stat">
+                <span class="stat-caption">Precision Rate</span>
+                <span class="stat-figure font-mono text-accent font-bold" id="s4PrecisionRate">—</span>
+              </div>
+              <div class="prep-stat">
+                <span class="stat-caption">Completion Rate</span>
+                <span class="stat-figure font-mono font-bold" id="s4CompletionPct">—</span>
+              </div>
+              <div class="prep-stat">
+                <span class="stat-caption">Unassigned</span>
+                <span class="stat-figure font-mono" id="s4UnassignedCount">—</span>
+              </div>
+              <div class="prep-stat">
+                <span class="stat-caption">Soft Preference Cost</span>
+                <span class="stat-figure font-mono text-accent" id="s4SoftCost">—</span>
+              </div>
+              <div class="prep-stat">
+                <span class="stat-caption">Solve Runtime</span>
+                <span class="stat-figure font-mono" id="s4RuntimeSec">—</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Preview Schedule Table (Toggled) -->
+          <div class="prep-ledger-details hidden mb-3" id="s4DetailsContainer">
+            <h3 class="text-xs font-bold text-muted uppercase mb-2">Sample Schedule Assignments</h3>
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Class</th>
+                  <th>Course Name</th>
+                  <th>Teacher</th>
+                  <th>Room</th>
+                  <th>Day &amp; Time</th>
+                  <th>Duration</th>
+                </tr>
+              </thead>
+              <tbody id="s4SampleTbody"></tbody>
+            </table>
+          </div>
+
+          <!-- Mandatory Stage 4 Approval Options -->
+          <div class="approval-action-card hidden" id="approvalCardStage4">
+            <div class="action-info">
+              <strong>Schedule Generated — Awaiting Your Approval:</strong>
+              <span class="text-muted text-xs">Independent validation will not start until you review and explicitly approve the generated schedule.</span>
+            </div>
+            <div class="action-buttons-group">
+              <button class="btn btn-secondary btn-sm" id="btnReviewStage4">Review Generated Schedule</button>
+              <button class="btn btn-primary" id="btnApproveStage4">Approve &amp; Continue to Validation</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================================================================
+           STAGE 5: INDEPENDENT VALIDATION PANEL
+           ================================================================ -->
+      <div class="stage-card locked mb-4" id="stageCard5">
+        <div class="panel-header">
+          <div>
+            <span class="stage-tag">Stage 5</span>
+            <h2 class="panel-title">Independent Validation Audit</h2>
+          </div>
+          <span class="stage-state-indicator" id="stage5StateIndicator">Locked</span>
+        </div>
+        <div class="panel-body">
+          <p class="text-muted mb-3">
+            Direct mathematical audit recomputing overlaps, capacity compliance, teacher availability, and fixed constraints from raw coordinates without relying on model assumptions.
+          </p>
+
+          <!-- Validation Execution Action (When Ready) -->
+          <div class="run-stage-banner mb-3" id="bannerRunStage5">
+            <button class="btn btn-primary" id="btnExecuteStage5">Run Independent Validation Audit</button>
+            <span class="text-muted text-xs ml-3">Generated schedule approved. Ready to run independent audit.</span>
+          </div>
+
+          <!-- Validation Report Grid -->
+          <div class="audit-certificate-grid mb-3 hidden" id="stage5AuditGrid"></div>
+
+          <!-- Student Conflict Notice -->
+          <div class="callout callout-info mb-3 hidden" id="s5StudentNotice">
+            <strong>Student-Level Conflict Notice:</strong>
+            <span class="text-xs text-muted ml-1" id="s5StudentNoticeText"></span>
+          </div>
+
+          <!-- Mandatory Stage 5 Approval Options -->
+          <div class="approval-action-card hidden" id="approvalCardStage5">
+            <div class="action-info">
+              <strong>Validation Finished — Awaiting Your Approval:</strong>
+              <span class="text-muted text-xs">Final timetable will not be published until you review the audit and explicitly approve finalisation.</span>
+            </div>
+            <div class="action-buttons-group">
+              <button class="btn btn-outline btn-sm" id="btnReturnToScheduling">Return to Scheduling</button>
+              <button class="btn btn-secondary btn-sm" id="btnReviewStage5">Review Validation Report</button>
+              <button class="btn btn-primary" id="btnApproveStage5">Approve &amp; Finalise Timetable</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================================================================
+           STAGE 6: FINAL TIMETABLE PUBLISHING PANEL
+           ================================================================ -->
+      <div class="stage-card locked mb-4" id="stageCard6">
+        <div class="panel-header">
+          <div>
+            <span class="stage-tag">Stage 6</span>
+            <h2 class="panel-title">Final Timetable Published</h2>
+          </div>
+          <span class="stage-state-indicator" id="stage6StateIndicator">Locked</span>
+        </div>
+        <div class="panel-body">
+          <div class="final-success-box text-center py-4" id="stage6ContentBox">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#15803d" stroke-width="2" class="mb-2">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+            <h3 class="font-bold text-lg text-success">Timetable Finalised &amp; Validated with Zero Collisions</h3>
+            <p class="text-muted text-xs mt-1 mb-4">
+              All 6 stages completed and approved. 36/36 class offerings scheduled with 100% hard-constraint compliance.
+            </p>
+            <div class="action-buttons-group justify-center">
+              <button class="btn btn-primary" id="btnGoToTimetableCalendar">
+                View Weekly Timetable Calendar
+              </button>
+              <a href="#" class="btn btn-secondary" id="btnDownloadFinalCSV" download="timetable.csv">
+                Download Final CSV
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ====================================================================
+         SECTION 2: TIMETABLE VIEW
+         Weekly Calendar & Filterable Table
+         ==================================================================== -->
+    <section class="module-view hidden" id="viewTimetable">
+      <div class="panel mb-4">
+        <div class="panel-header">
+          <div class="flex-align-center gap-3">
+            <h2 class="panel-title">Weekly Timetable Calendar</h2>
+            <span class="badge badge-success" id="timetableActiveBadge">Validated Schedule</span>
+          </div>
+
+          <div class="filter-controls">
+            <select class="form-select" id="filterDay">
+              <option value="ALL">All Days (Mon–Fri)</option>
+              <option value="Monday">Monday</option>
+              <option value="Tuesday">Tuesday</option>
+              <option value="Wednesday">Wednesday</option>
+              <option value="Thursday">Thursday</option>
+              <option value="Friday">Friday</option>
+            </select>
+
+            <select class="form-select" id="filterTeacher">
+              <option value="ALL">All Teachers</option>
+            </select>
+
+            <select class="form-select" id="filterRoom">
+              <option value="ALL">All Rooms</option>
+            </select>
+
+            <select class="form-select" id="filterDept">
+              <option value="ALL">All Departments</option>
+            </select>
+
+            <input type="text" class="form-input" id="searchTimetable" placeholder="Search course, teacher, room..." style="width: 220px;">
+
+            <div class="btn-group">
+              <button class="btn btn-sm btn-secondary active" id="btnToggleCalendar">Calendar</button>
+              <button class="btn btn-sm btn-secondary" id="btnToggleTable">Table</button>
+            </div>
+
+            <a href="#" class="btn btn-sm btn-primary" id="btnTimetableDownloadCSV" download="timetable.csv">
+              Download CSV
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Weekly Calendar View -->
+      <div class="calendar-container" id="containerCalendar">
+        <div class="calendar-grid" id="calendarGrid"></div>
+      </div>
+
+      <!-- Searchable Table View -->
+      <div class="panel hidden" id="containerTable">
+        <div class="panel-body p-0">
+          <div class="table-responsive">
+            <table class="data-table" id="timetableDataTable">
+              <thead>
+                <tr>
+                  <th>Class ID</th>
+                  <th>Course</th>
+                  <th>Department</th>
+                  <th>Teacher</th>
+                  <th>Room</th>
+                  <th>Building</th>
+                  <th>Day</th>
+                  <th>Time Interval</th>
+                  <th>Duration</th>
+                  <th>Size / Cap</th>
+                  <th>AI Score</th>
+                </tr>
+              </thead>
+              <tbody id="timetableTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 3: RESULTS & COMPARISON
+         ==================================================================== -->
+    <section class="module-view hidden" id="viewResults">
+      <div class="panel mb-4">
+        <div class="panel-header">
+          <div>
+            <h2 class="panel-title">Multi-Model Performance Comparison</h2>
+            <p class="text-muted text-xs mt-1">
+              Comparison across Greedy Baseline, Random Forest-Guided, and XGBoost-Guided scheduling on the same preprocessed dataset.
+            </p>
+          </div>
+        </div>
+        <div class="panel-body p-0">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Scheduling Method</th>
+                <th>Total Classes</th>
+                <th>Scheduled</th>
+                <th>Accuracy Rate</th>
+                <th>Precision Rate</th>
+                <th>Completion %</th>
+                <th>Room Collisions</th>
+                <th>Teacher Overlaps</th>
+                <th>Teacher Availability</th>
+                <th>Capacity Deficits</th>
+                <th>Soft Cost</th>
+                <th>Solve Time</th>
+              </tr>
+            </thead>
+            <tbody id="comparisonTableBody"></tbody>
+          </table>
+        </div>
+        <div class="panel-footer">
+          <span class="text-muted text-xs">
+            Selection criteria: 1. Strict zero hard collisions (Room=0, Teacher=0, Availability=0) → 2. Maximum scheduled classes → 3. Full room capacity compliance → 4. Lowest soft preference penalty → 5. Shortest runtime.
+          </span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

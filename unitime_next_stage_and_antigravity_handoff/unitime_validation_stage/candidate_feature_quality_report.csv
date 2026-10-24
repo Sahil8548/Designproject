@@ -1,0 +1,9 @@
+check,value,interpretation
+classes_in_source,896,All classes in benchmark
+candidate_room_time_pairs,220904,Joined by class ID
+candidate_feature_rows,220904,One row per candidate room-time pair
+classes_without_exactly_one_selected_time,0,Committed solution completeness check
+classes_with_room_count_mismatch,0,Compared selected room count to nrRooms; zero-room classes are valid
+selected_rooms_not_in_candidate_options,0,Membership check against original XML
+selected_times_not_in_candidate_options,0,Membership check against original XML
+feature_columns,36,Includes class/context features; drop IDs from model inputs

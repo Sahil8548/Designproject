@@ -1,0 +1,13 @@
+room_id,room_name,capacity,building
+R101,Lecture Hall 101,70,Block A
+R102,Seminar Room 102,50,Block A
+R103,Classroom 103,45,Block A
+R104,Auditorium 104,100,Block A
+R201,Lecture Hall 201,60,Block B
+R202,Classroom 202,40,Block B
+R203,Lecture Hall 203,80,Block B
+R204,Tutorial Room 204,35,Block B
+R301,Auditorium 301,90,Block C
+R302,Classroom 302,55,Block C
+R401,Grand Hall 401,120,Block D
+R402,Lecture Hall 402,65,Block D

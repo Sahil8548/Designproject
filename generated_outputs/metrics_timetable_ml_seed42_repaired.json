@@ -1,0 +1,167 @@
+{
+  "mode": "ml",
+  "seed": 42,
+  "repaired": true,
+  "newly_repaired_classes": 8,
+  "scheduled_classes": 873,
+  "total_classes": 896,
+  "unassigned_classes": 23,
+  "unassigned_class_ids": [
+    38,
+    501,
+    111,
+    112,
+    105,
+    102,
+    103,
+    104,
+    747,
+    891,
+    749,
+    894,
+    741,
+    742,
+    313,
+    719,
+    720,
+    723,
+    73,
+    375,
+    430,
+    197,
+    429
+  ],
+  "unassigned_reasons": [
+    {
+      "class_id": 38,
+      "reason": "Hard constraint collision on all candidate room/time slots"
+    },
+    {
+      "class_id": 501,
+      "reason": "Hard constraint collision on all candidate room/time slots"
+    },
+    {
+      "class_id": 111,
+      "reason": "Hard constraint collision on all candidate room/time slots"
+    },
+    {
+      "class_id": 112,
+      "reason": "Hard constraint collision on all candidate room/time slots"
+    },
+    {
+      "class_id": 105,
+      "reason": "Hard constraint collision on all candidate room/time slots"
+    },
+    {
+      "class_id": 102,
+      "reason": "Hard constraint collision on all candidate room/time slots"
+    },
+    {
+      "class_id": 103,
+      "reason": "Hard constraint collision on all candidate room/time slots"
+    },
+    {
+      "class_id": 104,
+      "reason": "Hard constraint collision on all candidate room/time slots"
+    },
+    {
+      "class_id": 747,
+      "reason": "Hard constraint collision on all candidate room/time slots"
+    },
+    {
+      "class_id": 891,
+      "reason": "Hard constraint collision on all candidate room/time slots"
+    },
+    {
+      "class_id": 749,
+      "reason": "Hard constraint collision on all candidate room/time slots"
+    },
+    {
+      "class_id": 894,
+      "reason": "Hard constraint collision on all candidate room/time slots"
+    },
+    {
+      "class_id": 741,
+      "reason": "Hard constraint collision on all candidate room/time slots"
+    },
+    {
+      "class_id": 742,
+      "reason": "Hard constraint collision on all candidate room/time slots"
+    },
+    {
+      "class_id": 313,
+      "reason": "Hard constraint collision on all candidate room/time slots"
+    },
+    {
+      "class_id": 468,
+      "reason": "Hard constraint collision on all candidate room/time slots"
+    },
+    {
+      "class_id": 503,
+      "reason": "Hard constraint collision on all candidate room/time slots"
+    },
+    {
+      "class_id": 718,
+      "reason": "Hard constraint collision on all candidate room/time slots"
+    },
+    {
+      "class_id": 719,
+      "reason": "Hard constraint collision on all candidate room/time slots"
+    },
+    {
+      "class_id": 720,
+      "reason": "Hard constraint collision on all candidate room/time slots"
+    },
+    {
+      "class_id": 862,
+      "reason": "Hard constraint collision on all candidate room/time slots"
+    },
+    {
+      "class_id": 723,
+      "reason": "Hard constraint collision on all candidate room/time slots"
+    },
+    {
+      "class_id": 298,
+      "reason": "Hard constraint collision on all candidate room/time slots"
+    },
+    {
+      "class_id": 73,
+      "reason": "Hard constraint collision on all candidate room/time slots"
+    },
+    {
+      "class_id": 375,
+      "reason": "Hard constraint collision on all candidate room/time slots"
+    },
+    {
+      "class_id": 430,
+      "reason": "Hard constraint collision on all candidate room/time slots"
+    },
+    {
+      "class_id": 865,
+      "reason": "Hard constraint collision on all candidate room/time slots"
+    },
+    {
+      "class_id": 866,
+      "reason": "Hard constraint collision on all candidate room/time slots"
+    },
+    {
+      "class_id": 197,
+      "reason": "Hard constraint collision on all candidate room/time slots"
+    },
+    {
+      "class_id": 61,
+      "reason": "Hard constraint collision on all candidate room/time slots"
+    },
+    {
+      "class_id": 429,
+      "reason": "Hard constraint collision on all candidate room/time slots"
+    }
+  ],
+  "room_overlap_pairs": 0,
+  "instructor_overlap_pairs": 0,
+  "shared_student_overlap_pairs_proxy": 2578,
+  "preference_cost_sum": -4986.5,
+  "runtime_seconds": 1.63,
+  "saved_file": "timetable_ml_seed42_repaired.csv",
+  "timestamp": "2026-10-23T17:48:13.984Z"
+}
