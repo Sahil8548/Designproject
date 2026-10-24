@@ -26,7 +26,7 @@ Then open: **<http://localhost:3000>**
 ## 🐍 Alternative: Run the Streamlit App
 
 ```bash
-pip install -r requirements.txt
+pip install -r unitime_app/requirements.txt
 streamlit run run_app.py
 ```
 Then open <http://localhost:8501>.

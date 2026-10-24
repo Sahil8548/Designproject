@@ -1,6 +1,8 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "version": 2,
+  "framework": null,
+  "outputDirectory": "public",
   "cleanUrls": true,
   "functions": {
     "api/**/*.js": {
@@ -14,11 +16,7 @@
     },
     {
       "source": "/api/:path*",
-      "destination": "/api/[...path].js?path=:path*"
-    },
-    {
-      "source": "/((?!api/).*)",
-      "destination": "/$1"
+      "destination": "/api/[...path].js"
     }
   ]
 }

@@ -8,6 +8,7 @@
     "dev": "node server.js",
     "build": "echo 'Build completed for Vercel deployment'",
     "streamlit": "streamlit run run_app.py",
+    "install:python": "pip install -r unitime_app/requirements.txt",
     "test": "node scripts/test_api_endpoints.js"
   },
   "engines": {
