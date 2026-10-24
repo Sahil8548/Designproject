@@ -19,20 +19,23 @@ const fs = require('fs');
 const path = require('path');
 const url = require('url');
 const crypto = require('crypto');
+const os = require('os');
 
 const PORT = process.env.PORT || 3000;
+const isServerless = Boolean(process.env.VERCEL || process.env.AWS_LAMBDA_FUNCTION_NAME);
 const ROOT_DIR = __dirname;
 const DATASETS_DIR = path.join(ROOT_DIR, 'datasets');
 const TEMPLATES_DIR = path.join(DATASETS_DIR, 'templates');
 const DEFAULT_UNI_DIR = path.join(DATASETS_DIR, 'default_university');
-const ACTIVE_DIR = path.join(DATASETS_DIR, 'active_upload');
-const GEN_DIR = path.join(ROOT_DIR, 'generated_outputs');
+
+// Environment-aware storage directory:
+// On Vercel / serverless, ROOT_DIR is read-only, so write operations go to os.tmpdir().
+// In local development, storage writes directly to the project directory.
+const STORAGE_BASE = isServerless ? path.join(os.tmpdir(), 'unitime_storage') : ROOT_DIR;
+const ACTIVE_DIR = isServerless ? path.join(STORAGE_BASE, 'active_upload') : path.join(DATASETS_DIR, 'active_upload');
+const GEN_DIR = isServerless ? path.join(STORAGE_BASE, 'generated_outputs') : path.join(ROOT_DIR, 'generated_outputs');
 const PREPROCESS_DIR = path.join(GEN_DIR, 'preprocessed_data');
 const STATE_FILE = path.join(GEN_DIR, 'workflow_state.json');
-
-[TEMPLATES_DIR, DEFAULT_UNI_DIR, ACTIVE_DIR, GEN_DIR, PREPROCESS_DIR].forEach(dir => {
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-});
 
 const REQUIRED_FILES = [
   'classes.csv',
@@ -43,14 +46,50 @@ const REQUIRED_FILES = [
   'course_requirements.csv'
 ];
 
-// Ensure active directory has default university files if empty
-REQUIRED_FILES.forEach(file => {
-  const activePath = path.join(ACTIVE_DIR, file);
-  const defPath = path.join(DEFAULT_UNI_DIR, file);
-  if (!fs.existsSync(activePath) && fs.existsSync(defPath)) {
-    fs.copyFileSync(defPath, activePath);
+// In-memory cache for uploaded CSV files to guarantee resilience in serverless / read-only environments
+const inMemoryCSVCache = new Map();
+
+function ensureDirectories() {
+  const dirs = [TEMPLATES_DIR, DEFAULT_UNI_DIR, ACTIVE_DIR, GEN_DIR, PREPROCESS_DIR];
+  dirs.forEach(dir => {
+    try {
+      if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+    } catch (e) {}
+  });
+
+  // Ensure active directory has default university files if empty
+  REQUIRED_FILES.forEach(file => {
+    try {
+      const activePath = path.join(ACTIVE_DIR, file);
+      const defPath = path.join(DEFAULT_UNI_DIR, file);
+      if (!fs.existsSync(activePath) && fs.existsSync(defPath)) {
+        fs.copyFileSync(defPath, activePath);
+      }
+    } catch (e) {}
+  });
+}
+ensureDirectories();
+
+// Safe CSV Content Reader (checks in-memory cache, active directory, and default university dataset)
+function readCSVContent(filename) {
+  const safeName = path.basename(filename);
+  if (inMemoryCSVCache.has(safeName)) {
+    return inMemoryCSVCache.get(safeName);
   }
-});
+  const activePath = path.join(ACTIVE_DIR, safeName);
+  if (fs.existsSync(activePath)) {
+    try {
+      return fs.readFileSync(activePath, 'utf8');
+    } catch (e) {}
+  }
+  const defPath = path.join(DEFAULT_UNI_DIR, safeName);
+  if (fs.existsSync(defPath)) {
+    try {
+      return fs.readFileSync(defPath, 'utf8');
+    } catch (e) {}
+  }
+  return '';
+}
 
 // Robust CSV Parser
 function parseCSV(text) {
@@ -106,9 +145,9 @@ function intervalsOverlap(day1, s1, e1, day2, s2, e2) {
 function computeDatasetFingerprint() {
   const hash = crypto.createHash('sha256');
   REQUIRED_FILES.forEach(f => {
-    const p = path.join(ACTIVE_DIR, f);
-    if (fs.existsSync(p)) {
-      hash.update(fs.readFileSync(p));
+    const content = readCSVContent(f);
+    if (content) {
+      hash.update(content);
     } else {
       hash.update(`missing:${f}`);
     }
@@ -190,7 +229,12 @@ function saveWorkflowState() {
       final_timetable_id: workflowState.runtime_data ? workflowState.runtime_data.final_timetable_id : null
     }
   };
-  fs.writeFileSync(STATE_FILE, JSON.stringify(stateToPersist, null, 2), 'utf8');
+  try {
+    if (!fs.existsSync(GEN_DIR)) fs.mkdirSync(GEN_DIR, { recursive: true });
+    fs.writeFileSync(STATE_FILE, JSON.stringify(stateToPersist, null, 2), 'utf8');
+  } catch (e) {
+    // In serverless, gracefully persist in memory
+  }
 }
 
 function invalidateDownstreamStages(fromStage) {
@@ -220,12 +264,11 @@ function invalidateDownstreamStages(fromStage) {
 // ============================================================================
 function runStage1CSVInput() {
   const filesInfo = REQUIRED_FILES.map(filename => {
-    const activePath = path.join(ACTIVE_DIR, filename);
-    const exists = fs.existsSync(activePath);
+    const content = readCSVContent(filename).trim();
+    const exists = content.length > 0;
     let rowCount = 0;
     let columns = [];
     if (exists) {
-      const content = fs.readFileSync(activePath, 'utf8').trim();
       const lines = content.split(/\r?\n/).filter(Boolean);
       rowCount = Math.max(0, lines.length - 1);
       if (lines.length > 0) {
@@ -254,7 +297,7 @@ function runStage1CSVInput() {
 // Validates schema, foreign keys, missing value rules, duplicates, capacities
 // ============================================================================
 function runStage2DataPreprocessing() {
-  const missingFiles = REQUIRED_FILES.filter(f => !fs.existsSync(path.join(ACTIVE_DIR, f)));
+  const missingFiles = REQUIRED_FILES.filter(f => readCSVContent(f).trim().length === 0);
   if (missingFiles.length > 0) {
     throw new Error(`Missing required CSV files: ${missingFiles.join(', ')}`);
   }
@@ -265,12 +308,12 @@ function runStage2DataPreprocessing() {
   const missingHandled = [];
   let duplicatesCount = 0;
 
-  const rawClasses = parseCSV(fs.readFileSync(path.join(ACTIVE_DIR, 'classes.csv'), 'utf8'));
-  const rawRooms = parseCSV(fs.readFileSync(path.join(ACTIVE_DIR, 'rooms.csv'), 'utf8'));
-  const rawTeachers = parseCSV(fs.readFileSync(path.join(ACTIVE_DIR, 'teachers.csv'), 'utf8'));
-  const rawTimeSlots = parseCSV(fs.readFileSync(path.join(ACTIVE_DIR, 'time_slots.csv'), 'utf8'));
-  const rawAvailability = parseCSV(fs.readFileSync(path.join(ACTIVE_DIR, 'teacher_availability.csv'), 'utf8'));
-  const rawRequirements = parseCSV(fs.readFileSync(path.join(ACTIVE_DIR, 'course_requirements.csv'), 'utf8'));
+  const rawClasses = parseCSV(readCSVContent('classes.csv'));
+  const rawRooms = parseCSV(readCSVContent('rooms.csv'));
+  const rawTeachers = parseCSV(readCSVContent('teachers.csv'));
+  const rawTimeSlots = parseCSV(readCSVContent('time_slots.csv'));
+  const rawAvailability = parseCSV(readCSVContent('teacher_availability.csv'));
+  const rawRequirements = parseCSV(readCSVContent('course_requirements.csv'));
 
   // 1. Teachers
   const validTeachers = [];
@@ -1196,7 +1239,12 @@ function runStage6FinalTimetable(records, config, validation) {
     r.ai_score
   ].join(','));
 
-  fs.writeFileSync(csvFilePath, [csvHeader, ...csvRows].join('\n'), 'utf8');
+  try {
+    if (!fs.existsSync(GEN_DIR)) fs.mkdirSync(GEN_DIR, { recursive: true });
+    fs.writeFileSync(csvFilePath, [csvHeader, ...csvRows].join('\n'), 'utf8');
+  } catch (e) {
+    console.warn(`Could not persist ${csvFilename} to disk:`, e.message);
+  }
 
   return {
     timetable_id: timetableId,
@@ -1209,20 +1257,33 @@ function runStage6FinalTimetable(records, config, validation) {
 }
 
 // ============================================================================
-// HTTP SERVER & ROUTING
+// HTTP REQUEST HANDLER (Supports Node.js HTTP & Vercel Serverless)
 // ============================================================================
-const server = http.createServer((req, res) => {
-  const parsedUrl = url.parse(req.url, true);
-  const pathname = parsedUrl.pathname;
-
+function handleRequest(req, res) {
+  // CORS & Security Headers
   res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-Requested-With');
 
   if (req.method === 'OPTIONS') {
     res.writeHead(204);
     res.end();
     return;
+  }
+
+  // Parse path
+  const parsedUrl = url.parse(req.url || '/', true);
+  let pathname = parsedUrl.pathname || '/';
+
+  // Support Vercel serverless catch-all query path forwarding
+  if (req.query && req.query.path) {
+    const sub = Array.isArray(req.query.path) ? req.query.path.join('/') : req.query.path;
+    pathname = sub.startsWith('/api') ? sub : (sub.startsWith('/') ? `/api${sub}` : `/api/${sub}`);
+  } else if (req.headers && req.headers['x-matched-path']) {
+    const matched = url.parse(req.headers['x-matched-path']).pathname;
+    if (matched && matched.startsWith('/api')) {
+      pathname = matched;
+    }
   }
 
   const state = loadWorkflowState();
@@ -1495,7 +1556,16 @@ const server = http.createServer((req, res) => {
           return;
         }
 
-        fs.writeFileSync(path.join(ACTIVE_DIR, filename), content.trim(), 'utf8');
+        // Cache in memory to ensure resilience in serverless
+        inMemoryCSVCache.set(filename, content.trim());
+
+        // Attempt writing to active directory
+        try {
+          if (!fs.existsSync(ACTIVE_DIR)) fs.mkdirSync(ACTIVE_DIR, { recursive: true });
+          fs.writeFileSync(path.join(ACTIVE_DIR, filename), content.trim(), 'utf8');
+        } catch (e) {
+          console.warn(`Persisting ${filename} to disk failed, maintained in-memory:`, e.message);
+        }
 
         // Replacing an input file invalidates downstream stages!
         invalidateDownstreamStages(1);
@@ -1788,9 +1858,15 @@ const server = http.createServer((req, res) => {
         }
       ];
 
+      const algorithmsObj = {};
+      comparisonMatrix.forEach(row => {
+        algorithmsObj[row.mode] = row;
+      });
+
       res.writeHead(200, { 'Content-Type': 'application/json' });
       res.end(JSON.stringify({
         comparison_matrix: comparisonMatrix,
+        algorithms: algorithmsObj,
         preprocessing: prepRes.summary
       }));
     } catch (e) {
@@ -1827,11 +1903,18 @@ const server = http.createServer((req, res) => {
       res.end(content, 'utf-8');
     }
   });
-});
+}
 
-server.listen(PORT, () => {
-  console.log(`=======================================================`);
-  console.log(`UniTime Step-by-Step Approval State-Machine Server`);
-  console.log(`Server actively running at http://localhost:${PORT}`);
-  console.log(`=======================================================`);
-});
+// Export for Vercel Serverless Functions
+module.exports = handleRequest;
+
+// Start local standalone HTTP server when executed directly
+if (require.main === module) {
+  const server = http.createServer(handleRequest);
+  server.listen(PORT, () => {
+    console.log(`=======================================================`);
+    console.log(`UniTime Step-by-Step Approval State-Machine Server`);
+    console.log(`Server actively running at http://localhost:${PORT}`);
+    console.log(`=======================================================`);
+  });
+}

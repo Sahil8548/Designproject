@@ -3,6 +3,15 @@
  * Step-by-Step State Machine Controller with Mandatory User Approval
  */
 
+// Base API URL: Defaults to empty string (same-origin relative URL for unified Vercel deployment).
+// Can be customized if backend API is deployed to a separate host (e.g., Render, Railway).
+const API_BASE = (typeof window !== 'undefined' && (window.__API_BASE__ || localStorage.getItem('unitime_api_base') || '')).replace(/\/$/, '');
+
+function apiUrl(path) {
+  const cleanPath = path.startsWith('/') ? path : `/${path}`;
+  return `${API_BASE}${cleanPath}`;
+}
+
 // Application State
 const AppState = {
   workflow: null,
@@ -40,6 +49,11 @@ function timeToMinutes(str) {
 // Initialization on DOM Load
 // ============================================================================
 document.addEventListener('DOMContentLoaded', () => {
+  if (API_BASE) {
+    document.querySelectorAll('a[href^="/api/templates/"]').forEach(a => {
+      a.href = apiUrl(a.getAttribute('href'));
+    });
+  }
   initNavigation();
   initWorkflowControls();
   initTimetableControls();
@@ -98,7 +112,7 @@ function switchTab(tabId) {
 // ============================================================================
 async function fetchWorkflowState() {
   try {
-    const res = await fetch('/api/workflow/state');
+    const res = await fetch(apiUrl('/api/workflow/state'));
     const state = await res.json();
     AppState.workflow = state;
     renderWorkflowState(state);
@@ -466,7 +480,7 @@ function renderStage6(state) {
 
   const downloadBtn = document.getElementById('btnDownloadFinalCSV');
   if (downloadBtn && s6.summary) {
-    downloadBtn.href = `/api/export-csv/${s6.summary.timetable_id}`;
+    downloadBtn.href = apiUrl(`/api/export-csv/${s6.summary.timetable_id}`);
     downloadBtn.setAttribute('download', `${s6.summary.timetable_id}.csv`);
   }
 }
@@ -481,7 +495,7 @@ function initWorkflowControls() {
     btnSample.addEventListener('click', async () => {
       btnSample.disabled = true;
       try {
-        const res = await fetch('/api/load-sample', { method: 'POST' });
+        const res = await fetch(apiUrl('/api/load-sample'), { method: 'POST' });
         await fetchWorkflowState();
       } catch (err) {
         alert('Error loading sample dataset: ' + err.message);
@@ -503,7 +517,7 @@ function initWorkflowControls() {
       reader.onload = async event => {
         const content = event.target.result;
         try {
-          await fetch('/api/upload', {
+          await fetch(apiUrl('/api/upload'), {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ filename, content })
@@ -525,7 +539,7 @@ function initWorkflowControls() {
       if (!confirmReset) return;
 
       try {
-        const res = await fetch('/api/workflow/reset', { method: 'POST' });
+        const res = await fetch(apiUrl('/api/workflow/reset'), { method: 'POST' });
         const state = await res.json();
         AppState.workflow = state;
         renderWorkflowState(state);
@@ -541,7 +555,7 @@ function initWorkflowControls() {
     btnApprove1.addEventListener('click', async () => {
       btnApprove1.disabled = true;
       try {
-        const res = await fetch('/api/workflow/approve-stage', {
+        const res = await fetch(apiUrl('/api/workflow/approve-stage'), {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ stage: 1 })
@@ -564,7 +578,7 @@ function initWorkflowControls() {
       btnExec2.disabled = true;
       btnExec2.innerText = 'Preprocessing CSVs...';
       try {
-        const res = await fetch('/api/workflow/execute-stage', {
+        const res = await fetch(apiUrl('/api/workflow/execute-stage'), {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ stage: 2 })
@@ -596,7 +610,7 @@ function initWorkflowControls() {
     btnApprove2.addEventListener('click', async () => {
       btnApprove2.disabled = true;
       try {
-        const res = await fetch('/api/workflow/approve-stage', {
+        const res = await fetch(apiUrl('/api/workflow/approve-stage'), {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ stage: 2 })
@@ -631,7 +645,7 @@ function initWorkflowControls() {
       btnExec3.innerText = 'Scoring Placements...';
       const model = document.querySelector('input[name="stage3Model"]:checked').value;
       try {
-        const res = await fetch('/api/workflow/execute-stage', {
+        const res = await fetch(apiUrl('/api/workflow/execute-stage'), {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ stage: 3, config: { model } })
@@ -663,7 +677,7 @@ function initWorkflowControls() {
     btnApprove3.addEventListener('click', async () => {
       btnApprove3.disabled = true;
       try {
-        const res = await fetch('/api/workflow/approve-stage', {
+        const res = await fetch(apiUrl('/api/workflow/approve-stage'), {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ stage: 3 })
@@ -689,7 +703,7 @@ function initWorkflowControls() {
       const applyRepair = document.getElementById('chkEnableRepair').checked;
 
       try {
-        const res = await fetch('/api/workflow/execute-stage', {
+        const res = await fetch(apiUrl('/api/workflow/execute-stage'), {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ stage: 4, config: { seed, apply_repair: applyRepair } })
@@ -742,7 +756,7 @@ function initWorkflowControls() {
     btnApprove4.addEventListener('click', async () => {
       btnApprove4.disabled = true;
       try {
-        const res = await fetch('/api/workflow/approve-stage', {
+        const res = await fetch(apiUrl('/api/workflow/approve-stage'), {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ stage: 4 })
@@ -765,7 +779,7 @@ function initWorkflowControls() {
       btnExec5.disabled = true;
       btnExec5.innerText = 'Running Independent Audit...';
       try {
-        const res = await fetch('/api/workflow/execute-stage', {
+        const res = await fetch(apiUrl('/api/workflow/execute-stage'), {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ stage: 5 })
@@ -790,7 +804,7 @@ function initWorkflowControls() {
       if (!confirmReturn) return;
 
       try {
-        const res = await fetch('/api/workflow/return-to-scheduling', { method: 'POST' });
+        const res = await fetch(apiUrl('/api/workflow/return-to-scheduling'), { method: 'POST' });
         const state = await res.json();
         AppState.workflow = state;
         renderWorkflowState(state);
@@ -808,7 +822,7 @@ function initWorkflowControls() {
       btnApprove5.innerText = 'Finalising Timetable...';
       try {
         // 1. Approve Stage 5
-        const res = await fetch('/api/workflow/approve-stage', {
+        const res = await fetch(apiUrl('/api/workflow/approve-stage'), {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ stage: 5 })
@@ -816,7 +830,7 @@ function initWorkflowControls() {
         let state = await res.json();
 
         // 2. Execute Stage 6 (Finalize)
-        const res6 = await fetch('/api/workflow/execute-stage', {
+        const res6 = await fetch(apiUrl('/api/workflow/execute-stage'), {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ stage: 6 })
@@ -824,7 +838,7 @@ function initWorkflowControls() {
         state = await res6.json();
 
         // 3. Approve Stage 6
-        const res6App = await fetch('/api/workflow/approve-stage', {
+        const res6App = await fetch(apiUrl('/api/workflow/approve-stage'), {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ stage: 6 })
@@ -880,7 +894,7 @@ function initTimetableControls() {
 
 async function loadActiveTimetable() {
   try {
-    const res = await fetch('/api/timetable/active');
+    const res = await fetch(apiUrl('/api/timetable/active'));
     const data = await res.json();
     AppState.activeRecords = data.records || [];
     renderTimetableCalendar(AppState.activeRecords);
@@ -1033,7 +1047,7 @@ function renderTimetableTable(records) {
 // ============================================================================
 async function fetchResultsData() {
   try {
-    const res = await fetch('/api/results');
+    const res = await fetch(apiUrl('/api/results'));
     const data = await res.json();
     AppState.comparisonMatrix = data.comparison_matrix || [];
     renderComparisonTable(AppState.comparisonMatrix);

@@ -1,0 +1,17 @@
+# Exclude Python runtime manifests and desktop code from Vercel deployment
+# (Resolves PYTHON_ENTRYPOINT_NOT_FOUND error by ensuring Vercel treats this as a Node.js project)
+requirements.txt
+run_app.py
+unitime_app/
+unitime_next_stage_and_antigravity_handoff/
+tests/
+
+# Caches, virtual environments and OS metadata
+.pytest_cache/
+.venv/
+__pycache__/
+*.pyc
+*.log
+.DS_Store
+Thumbs.db
+.agents/

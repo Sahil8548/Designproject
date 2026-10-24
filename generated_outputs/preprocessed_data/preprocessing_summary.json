@@ -2,14 +2,14 @@
   "status": "Clean & Verified",
   "metrics": {
     "files_loaded": 6,
-    "total_input_rows": 3350,
-    "total_valid_rows": 3350,
-    "classes_count": 400,
-    "rooms_count": 50,
-    "teachers_count": 60,
+    "total_input_rows": 780,
+    "total_valid_rows": 780,
+    "classes_count": 36,
+    "rooms_count": 12,
+    "teachers_count": 16,
     "time_slots_count": 40,
-    "availability_records_count": 2400,
-    "course_requirements_count": 400,
+    "availability_records_count": 640,
+    "course_requirements_count": 36,
     "invalid_records_count": 0,
     "duplicates_detected": 0,
     "missing_values_handled": 0,
@@ -17,20 +17,20 @@
   },
   "tables": {
     "classes": {
-      "input_rows": 400,
-      "valid_rows": 400,
+      "input_rows": 36,
+      "valid_rows": 36,
       "invalid_rows": 0,
       "missing_handled": 0
     },
     "rooms": {
-      "input_rows": 50,
-      "valid_rows": 50,
+      "input_rows": 12,
+      "valid_rows": 12,
       "invalid_rows": 0,
       "missing_handled": 0
     },
     "teachers": {
-      "input_rows": 60,
-      "valid_rows": 60,
+      "input_rows": 16,
+      "valid_rows": 16,
       "invalid_rows": 0,
       "missing_handled": 0
     },
@@ -41,14 +41,14 @@
       "missing_handled": 0
     },
     "teacher_availability": {
-      "input_rows": 2400,
-      "valid_rows": 2400,
+      "input_rows": 640,
+      "valid_rows": 640,
       "invalid_rows": 0,
       "missing_handled": 0
     },
     "course_requirements": {
-      "input_rows": 400,
-      "valid_rows": 400,
+      "input_rows": 36,
+      "valid_rows": 36,
       "invalid_rows": 0,
       "missing_handled": 0
     }
@@ -64,7 +64,7 @@
     },
     {
       "check": "Teacher Terminology & Foreign Keys",
-      "status": "Passed (60 teachers verified)"
+      "status": "Passed (16 teachers verified)"
     },
     {
       "check": "Time Slot Interval Boundaries",
@@ -76,7 +76,7 @@
     },
     {
       "check": "Teacher Availability Matrix",
-      "status": "Passed (1985 available, 415 unavailable)"
+      "status": "Passed (602 available, 38 unavailable)"
     }
   ],
   "missing_handled_sample": [],

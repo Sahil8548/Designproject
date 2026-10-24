@@ -6,8 +6,12 @@
   "scripts": {
     "start": "node server.js",
     "dev": "node server.js",
+    "build": "echo 'Build completed for Vercel deployment'",
     "streamlit": "streamlit run run_app.py",
-    "test": "node -e \"console.log('Testing server API...'); require('http').get('http://localhost:3000/api/tests', r => r.pipe(process.stdout));\""
+    "test": "node scripts/test_api_endpoints.js"
+  },
+  "engines": {
+    "node": ">=18.x"
   },
   "keywords": [
     "university-timetabling",
